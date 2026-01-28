@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="pl" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Profesjonalna produkcja wideo dla branży motoryzacyjnej. 7.5M wyświetleń z jednego dnia zdjęciowego. Rolki wideo, które generują zasięgi dla dealerów i salonów samochodowych.">
+    <meta name="keywords"
+        content="rolki wideo warszawa, videograf motoryzacyjny, produkcja wideo samochody, instagram reels dealer, tiktok motoryzacja">
+
+    <title>Jakub Kubacki | Produkcja Wideo Motoryzacyjnego | 7.5M Wyświetleń</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            400: '#f4d03f',
+                            500: '#d4af37',
+                            600: '#b8960c',
+                        },
+                        dark: {
+                            900: '#0a0a0a',
+                            800: '#141414',
+                            700: '#1a1a1a',
+                        }
+                    },
+                    fontFamily: {
+                        'display': ['"Bebas Neue"', 'cursive'],
+                        'body': ['Inter', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'noise': "url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noise%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noise)%22/%3E%3C/svg%3E')",
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #ffffff;
+        }
+
+        .noise-overlay {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+            opacity: 0.03;
+            pointer-events: none;
+        }
+
+        .gold-gradient {
+            background: linear-gradient(135deg, #d4af37 0%, #f4d03f 50%, #b8960c 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .gold-border {
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(212, 175, 55, 0.15);
+            border-color: rgba(212, 175, 55, 0.6);
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .number-counter {
+            font-variant-numeric: tabular-nums;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #0a0a0a;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #d4af37;
+        }
+    </style>
+</head>
+
+<body class="font-body antialiased overflow-x-hidden">
+    <!-- Noise Overlay -->
+    <div class="fixed inset-0 noise-overlay z-50"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-40 bg-dark-900/80 backdrop-blur-md border-b border-white/5 transition-all duration-300"
+        id="navbar">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0">
+                    <a href="#" class="font-display text-2xl tracking-wider text-gold-500">
+                        KUBACKI<span class="text-white">.VIDEO</span>
+                    </a>
+                </div>
+
+                <div class="hidden md:flex space-x-8">
+                    <a href="#case-study"
+                        class="text-sm font-medium text-gray-300 hover:text-gold-500 transition-colors uppercase tracking-widest">Case
+                        Study</a>
+                    <a href="#uslugi"
+                        class="text-sm font-medium text-gray-300 hover:text-gold-500 transition-colors uppercase tracking-widest">Usługi</a>
+                    <a href="#portfolio"
+                        class="text-sm font-medium text-gray-300 hover:text-gold-500 transition-colors uppercase tracking-widest">Portfolio</a>
+                    <a href="#dlaczego-ja"
+                        class="text-sm font-medium text-gray-300 hover:text-gold-500 transition-colors uppercase tracking-widest">Dlaczego
+                        Ja</a>
+                    <a href="#kontakt"
+                        class="px-6 py-2 bg-gold-500 text-dark-900 font-semibold text-sm rounded hover:bg-gold-400 transition-colors uppercase tracking-wider">Wycena</a>
+                </div>
+
+                <button class="md:hidden text-white"
+                    onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-dark-800 border-b border-white/10">
+            <div class="px-6 pt-2 pb-6 space-y-2">
+                <a href="#case-study"
+                    class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-gold-500">Case Study</a>
+                <a href="#uslugi"
+                    class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-gold-500">Usługi</a>
+                <a href="#portfolio"
+                    class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-gold-500">Portfolio</a>
+                <a href="#kontakt" class="block px-3 py-2 text-base font-medium text-gold-500">Wycena</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute top-20 right-0 w-96 h-96 bg-gold-500/10 rounded-full blur-[120px]"></div>
+        <div class="absolute bottom-0 left-0 w-72 h-72 bg-gold-500/5 rounded-full blur-[100px]"></div>
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 w-full">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="fade-in">
+                    <div
+                        class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gold-500/10 border border-gold-500/20 mb-6">
+                        <span class="w-2 h-2 rounded-full bg-gold-500 animate-pulse"></span>
+                        <span class="text-gold-500 text-sm font-medium tracking-wider uppercase">Videograf Motoryzacyjny
+                            Warszawa</span>
+                    </div>
+
+                    <h1 class="font-display text-6xl md:text-7xl lg:text-8xl leading-none mb-6 text-white">
+                        7.5M<br>
+                        <span class="gold-gradient">WYSŁEŁEŃ</span><br>
+                        z 1 dnia
+                    </h1>
+
+                    <p class="text-xl md:text-2xl text-gray-400 mb-8 font-light max-w-lg">
+                        Produkcja wideo dla branży motoryzacyjnej. Rolki, które generują zasięgi i sprzedają auta.
+                    </p>
+
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#case-study"
+                            class="px-8 py-4 bg-gold-500 text-dark-900 font-bold text-lg rounded hover:bg-gold-400 transition-all transform hover:scale-105 uppercase tracking-wider">
+                            Zobacz Wyniki
+                        </a>
+                        <a href="#kontakt"
+                            class="px-8 py-4 border border-white/20 text-white font-medium text-lg rounded hover:border-gold-500 hover:text-gold-500 transition-all uppercase tracking-wider">
+                            Bezpłatna Wycena
+                        </a>
+                    </div>
+
+                    <div class="mt-12 flex items-center gap-6 text-sm text-gray-500">
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-check text-gold-500"></i>
+                            <span>5 rolek = 7.5M wyświetleń</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-check text-gold-500"></i>
+                            <span>Warszawa + okolice</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative fade-in" style="transition-delay: 0.2s">
+                    <div class="relative bg-gradient-to-br from-dark-800 to-dark-900 rounded-2xl p-1 gold-border">
+                        <div class="aspect-[4/5] rounded-xl overflow-hidden bg-dark-800 relative">
+                            <img src="https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=800&q=80"
+                                alt="BMW M5 - produkcja wideo" class="w-full h-full object-cover opacity-90">
+
+                            <!-- Video Stats Overlay -->
+                            <div
+                                class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-black/80 to-transparent p-6">
+                                <div class="grid grid-cols-3 gap-4 text-center">
+                                    <div>
+                                        <div class="text-2xl font-bold text-gold-500">3.45M</div>
+                                        <div class="text-xs text-gray-400 uppercase tracking-wider">YouTube</div>
+                                    </div>
+                                    <div>
+                                        <div class="text-2xl font-bold text-gold-500">2.09M</div>
+                                        <div class="text-xs text-gray-400 uppercase tracking-wider">Instagram</div>
+                                    </div>
+                                    <div>
+                                        <div class="text-2xl font-bold text-gold-500">1.95M</div>
+                                        <div class="text-xs text-gray-400 uppercase tracking-wider">TikTok</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Badge -->
+                            <div
+                                class="absolute top-4 left-4 bg-gold-500 text-dark-900 px-3 py-1 rounded font-bold text-sm uppercase tracking-wider">
+                                Top Performer
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Decorative Element -->
+                    <div
+                        class="absolute -z-10 top-1/2 right-0 transform translate-x-1/4 -translate-y-1/2 text-[200px] font-display text-white/5 select-none pointer-events-none">
+                        M5
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Study Stats -->
+    <section id="case-study" class="py-24 bg-dark-800 relative">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-sm font-bold text-gold-500 uppercase tracking-[0.3em] mb-4">Case Study</h2>
+                <h3 class="font-display text-5xl md:text-6xl text-white mb-6">Sure Classics</h3>
+                <p class="text-xl text-gray-400 max-w-2xl mx-auto mb-8">
+                    Dealer samochodów klasycznych i sportowych. Realne wyniki z jednego dnia zdjęciowego.
+                </p>
+                <div class="flex justify-center">
+                    <a href="Sure_Classics_Case_Study.pdf" target="_blank"
+                        class="inline-flex items-center gap-2 px-6 py-3 border border-gold-500 text-gold-500 hover:bg-gold-500 hover:text-dark-900 transition-colors rounded uppercase tracking-wider text-sm font-bold">
+                        <i class="fas fa-file-pdf"></i> Pobierz Case Study (PDF)
+                    </a>
+                </div>
+            </div>
+
+            <!-- Main Stat -->
+            <div class="text-center mb-16 fade-in">
+                <div class="text-8xl md:text-9xl font-display gold-gradient mb-4 number-counter" data-target="7490000">0
+                </div>
+                <div class="text-2xl text-white uppercase tracking-widest font-light">Łącznych Wyświetleń</div>
+                <div class="text-gray-500 mt-2">ze wszystkich platform</div>
+            </div>
+
+            <!-- Platform Breakdown -->
+            <div class="grid md:grid-cols-3 gap-6 mb-16 fade-in">
+                <div class="bg-dark-900 p-8 rounded-xl border border-white/5 card-hover">
+                    <div class="flex items-center justify-between mb-4">
+                        <i class="fab fa-youtube text-4xl text-red-500"></i>
+                        <span class="text-sm text-gray-500 uppercase tracking-wider">YouTube Shorts</span>
+                    </div>
+                    <div class="text-4xl font-display text-white mb-2">3.45M</div>
+                    <div class="w-full bg-gray-800 h-2 rounded-full overflow-hidden">
+                        <div class="bg-red-500 h-full" style="width: 46%"></div>
+                    </div>
+                    <div class="text-sm text-gray-500 mt-2">46% udziału</div>
+                </div>
+
+                <div class="bg-dark-900 p-8 rounded-xl border border-white/5 card-hover">
+                    <div class="flex items-center justify-between mb-4">
+                        <i class="fab fa-instagram text-4xl text-pink-500"></i>
+                        <span class="text-sm text-gray-500 uppercase tracking-wider">Instagram Reels</span>
+                    </div>
+                    <div class="text-4xl font-display text-white mb-2">2.09M</div>
+                    <div class="w-full bg-gray-800 h-2 rounded-full overflow-hidden">
+                        <div class="bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 h-full"
+                            style="width: 28%"></div>
+                    </div>
+                    <div class="text-sm text-gray-500 mt-2">28% udziału</div>
+                </div>
+
+                <div class="bg-dark-900 p-8 rounded-xl border border-white/5 card-hover">
+                    <div class="flex items-center justify-between mb-4">
+                        <i class="fab fa-tiktok text-4xl text-white"></i>
+                        <span class="text-sm text-gray-500 uppercase tracking-wider">TikTok</span>
+                    </div>
+                    <div class="text-4xl font-display text-white mb-2">1.95M</div>
+                    <div class="w-full bg-gray-800 h-2 rounded-full overflow-hidden">
+                        <div class="bg-white h-full" style="width: 26%"></div>
+                    </div>
+                    <div class="text-sm text-gray-500 mt-2">26% udziału</div>
+                </div>
+            </div>
+
+            <!-- Top Performing Video -->
+            <div
+                class="bg-gradient-to-r from-dark-700 to-dark-800 rounded-2xl p-8 md:p-12 border border-gold-500/20 fade-in">
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <div
+                            class="inline-block px-3 py-1 bg-gold-500/20 text-gold-500 rounded text-sm font-bold uppercase tracking-wider mb-4">
+                            Najlepsza Rolka
+                        </div>
+                        <h4 class="font-display text-3xl md:text-4xl text-white mb-4">
+                            BMW M5 DRIFT MODE
+                        </h4>
+                        <!-- TRUNCATED IN INPUT, FILLED PLACEHOLDER -->
+                        <p class="text-gray-400 mb-6">
+                            Szczegółowa prezentacja możliwości samochodu w dynamicznym montażu.
+                        </p>
+                        <a href="#kontakt"
+                            class="inline-block px-6 py-3 border border-gold-500 text-gold-500 hover:bg-gold-500 hover:text-dark-900 transition-colors rounded uppercase tracking-wider text-sm font-bold">
+                            Zobacz Więcej
+                        </a>
+                    </div>
+                    <!-- Right Column Placeholder for Truncated Content -->
+                    <div
+                        class="relative aspect-[9/16] md:aspect-video bg-dark-900 rounded-lg overflow-hidden flex items-center justify-center border border-white/10">
+                        <div class="text-center">
+                            <i
+                                class="fas fa-play-circle text-6xl text-gold-500 mb-4 opacity-80 hover:opacity-100 transition-opacity cursor-pointer"></i>
+                            <p class="text-xs text-gray-500 uppercase tracking-widest">Odtwórz Wideo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

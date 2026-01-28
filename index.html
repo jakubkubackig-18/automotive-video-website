@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Profesjonalna produkcja wideo dla branży motoryzacyjnej. 7.5M wyświetleń z jednego dnia zdjęciowego.">
+    <title>Jakub Kubacki | Produkcja Wideo Motoryzacyjnego</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --black: #0a0a0a;
+            --dark: #111111;
+            --dark-light: #1a1a1a;
+            --orange: #ff6b00;
+            --orange-hover: #ff8533;
+            --white: #ffffff;
+            --gray: #999999;
+            --gray-light: #cccccc;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--black);
+            color: var(--white);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* NAVIGATION */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 20px 0;
+            z-index: 100;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--orange);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-icon svg {
+            width: 20px;
+            height: 20px;
+            fill: var(--white);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--orange);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: all 0.3s;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--orange);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background: var(--orange-hover);
+            transform: translateY(-2px);
+        }
+
+        /* HERO REDESIGNED */
+        .hero {
+            padding: 180px 0 120px;
+            background: radial-gradient(circle at center, #1a1a1a 0%, #0a0a0a 100%);
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 600px;
+            height: 600px;
+            background: var(--orange);
+            opacity: 0.15;
+            filter: blur(100px);
+            z-index: 0;
+            border-radius: 50%;
+        }
+
+        .hero-inner {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .hero-tag {
+            color: var(--orange);
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 24px;
+            background: rgba(255, 107, 0, 0.1);
+            padding: 8px 16px;
+            border-radius: 20px;
+            display: inline-block;
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 6vw, 4.5rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 32px;
+            letter-spacing: -1px;
+            color: var(--white);
+        }
+
+        .hero h1 span.highlight {
+            background: linear-gradient(to right, #ff6b00, #ff9e55);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            color: var(--gray-light);
+            margin-bottom: 40px;
+            line-height: 1.8;
+            max-width: 600px;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--white);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: all 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        /* SERVICES STRIP */
+        .services-strip {
+            padding: 60px 0;
+            background: var(--dark);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .services-strip-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 32px;
+        }
+
+        .services-intro {
+            max-width: 250px;
+        }
+
+        .services-intro p {
+            font-size: 0.85rem;
+            color: var(--gray);
+            line-height: 1.7;
+        }
+
+        .services-grid {
+            display: flex;
+            gap: 48px;
+        }
+
+        .service-item {
+            text-align: center;
+            min-width: 100px;
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            transition: all 0.3s;
+        }
+
+        .service-item:hover .service-icon {
+            border-color: var(--orange);
+            background: rgba(255, 107, 0, 0.1);
+        }
+
+        .service-icon svg {
+            width: 28px;
+            height: 28px;
+            stroke: var(--white);
+            fill: none;
+            stroke-width: 1.5;
+        }
+
+        .service-item h4 {
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        /* STATS SECTION */
+        .stats-section {
+            padding: 100px 0;
+            background: var(--black);
+        }
+
+        .stats-inner {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .stats-video {
+            position: relative;
+            width: 300px;
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        .stats-video img {
+            width: 100%;
+            aspect-ratio: 9/16;
+            object-fit: cover;
+            display: block;
+        }
+
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80px;
+            height: 80px;
+            background: var(--orange);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .play-button:hover {
+            transform: translate(-50%, -50%) scale(1.1);
+            background: var(--orange-hover);
+        }
+
+        .play-button svg {
+            width: 24px;
+            height: 24px;
+            fill: var(--white);
+            margin-left: 4px;
+        }
+
+        .stats-content h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+
+        .stats-description {
+            color: var(--gray);
+            margin-bottom: 32px;
+            line-height: 1.8;
+        }
+
+        .stats-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.95rem;
+        }
+
+        .stat-item svg {
+            width: 20px;
+            height: 20px;
+            fill: var(--orange);
+            flex-shrink: 0;
+        }
+
+        /* BIG NUMBERS */
+        .big-numbers {
+            padding: 80px 0;
+            background: var(--dark);
+        }
+
+        .numbers-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+            text-align: center;
+        }
+
+        .number-item h3 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--orange);
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .number-item p {
+            font-size: 0.9rem;
+            color: var(--gray);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* CLIENTS */
+        .clients {
+            padding: 80px 0;
+            background: var(--black);
+        }
+
+        .clients h3 {
+            text-align: center;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--gray);
+            margin-bottom: 48px;
+        }
+
+        .clients-grid {
+            display: flex;
+            justify-content: center;
+            gap: 64px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .client-logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--white);
+            opacity: 0.5;
+            transition: opacity 0.3s;
+            letter-spacing: 2px;
+        }
+
+        .client-logo:hover {
+            opacity: 1;
+            color: var(--orange);
+        }
+
+        /* PORTFOLIO */
+        .portfolio {
+            padding: 100px 0;
+            background: var(--dark);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+
+        .section-tag {
+            color: var(--orange);
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 16px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .portfolio-card {
+            background: var(--dark-light);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: transform 0.4s, box-shadow 0.4s;
+        }
+
+        .portfolio-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(255, 107, 0, 0.15);
+        }
+
+        .portfolio-thumb {
+            position: relative;
+            aspect-ratio: 9/16;
+            overflow: hidden;
+        }
+
+        .portfolio-thumb img,
+        .portfolio-thumb iframe,
+        .portfolio-thumb video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s;
+            border: none;
+        }
+
+        .portfolio-card:hover .portfolio-thumb img {
+            transform: scale(1.05);
+        }
+
+        .portfolio-badge {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            background: var(--orange);
+            color: var(--white);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .portfolio-views {
+            position: absolute;
+            bottom: 16px;
+            right: 16px;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .portfolio-platform {
+            position: absolute;
+            bottom: 16px;
+            left: 16px;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 8px 14px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .portfolio-platform svg {
+            width: 18px;
+            height: 18px;
+            fill: var(--white);
+        }
+
+        .portfolio-info {
+            padding: 20px;
+        }
+
+        .portfolio-client {
+            color: var(--orange);
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+        }
+
+        .portfolio-title {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .portfolio-scope {
+            font-size: 0.8rem;
+            color: var(--gray);
+        }
+
+        /* CTA BANNER */
+        .cta-banner {
+            padding: 120px 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1920') center/cover;
+            text-align: center;
+        }
+
+        .cta-tag {
+            color: var(--orange);
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 16px;
+        }
+
+        .cta-banner h2 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 700;
+            margin-bottom: 32px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* FOOTER */
+        footer {
+            padding: 60px 0 40px;
+            background: var(--dark);
+        }
+
+        .footer-inner {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 48px;
+            margin-bottom: 48px;
+        }
+
+        .footer-brand .logo {
+            margin-bottom: 20px;
+        }
+
+        .footer-brand p {
+            font-size: 0.85rem;
+            color: var(--gray);
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 12px;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background: var(--orange);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        .social-link:hover {
+            background: var(--orange-hover);
+            transform: translateY(-3px);
+        }
+
+        .social-link svg {
+            width: 18px;
+            height: 18px;
+            fill: var(--white);
+        }
+
+        .footer-col h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col a {
+            font-size: 0.85rem;
+            color: var(--gray);
+            transition: color 0.3s;
+        }
+
+        .footer-col a:hover {
+            color: var(--orange);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 12px;
+            font-size: 0.85rem;
+            color: var(--gray);
+        }
+
+        .contact-item svg {
+            width: 16px;
+            height: 16px;
+            fill: var(--orange);
+            flex-shrink: 0;
+            margin-top: 3px;
+        }
+
+        .footer-bottom {
+            padding-top: 24px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--gray);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 1024px) {
+            .hero-inner {
+                grid-template-columns: 1fr;
+                gap: 48px;
+            }
+
+            .hero-video {
+                order: -1;
+            }
+
+            .stats-inner {
+                grid-template-columns: 1fr;
+                gap: 48px;
+            }
+
+            .stats-video {
+                margin: 0 auto;
+            }
+
+            .services-strip-inner {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .services-intro {
+                max-width: 100%;
+            }
+
+            .services-grid {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .numbers-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .portfolio-grid {
+                grid-template-columns: repeat(2, 1fr);
+                max-width: 600px;
+            }
+
+            .footer-inner {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding: 120px 0 60px;
+            }
+
+            .hero-video-card {
+                width: 240px;
+            }
+
+            .stats-video {
+                width: 260px;
+            }
+
+            .numbers-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 24px;
+            }
+
+            .number-item h3 {
+                font-size: 2.5rem;
+            }
+
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+                max-width: 300px;
+            }
+
+            .footer-inner {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-inner">
+            <a href="#" class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24">
+                        <polygon points="5 3 19 12 5 21 5 3" />
+                    </svg>
+                </div>
+                <span>JAKUB KUBACKI</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#uslugi">Usługi</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#wyniki">Wyniki</a></li>
+                <li><a href="#kontakt" class="btn btn-primary">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-inner">
+                <span class="hero-tag">Automotive Video Production</span>
+                <h1>Twórz Wideo, Które <br><span class="highlight">Napędza Sprzedaż</span></h1>
+                <p class="hero-description">Profesjonalna produkcja wideo dla branży motoryzacyjnej. Od koncepcji, przez
+                    realizację, aż po miliony wyświetleń. Wyróżnij swoją markę na tle konkurencji.</p>
+                <div class="hero-actions">
+                    <a href="#kontakt" class="btn btn-primary">Rozpocznij Projekt</a>
+                    <a href="#portfolio" class="btn btn-secondary">Zobacz Realizacje</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services-strip" id="uslugi">
+        <div class="container">
+            <div class="services-strip-inner">
+                <div class="services-intro">
+                    <p>Wspieram firmy motoryzacyjne w budowaniu zasięgów w social media poprzez
+                        profesjonalne rolki
+                        wideo.</p>
+                </div>
+                <div class="services-grid">
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="10" />
+                                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+                                <line x1="12" y1="17" x2="12.01" y2="17" />
+                            </svg>
+                        </div>
+                        <h4>Koncepcja</h4>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
+                                <circle cx="12" cy="13" r="4" />
+                            </svg>
+                        </div>
+                        <h4>Nagranie</h4>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                                <line x1="8" y1="21" x2="16" y2="21" />
+                                <line x1="12" y1="17" x2="12" y2="21" />
+                            </svg>
+                        </div>
+                        <h4>Montaż</h4>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24">
+                                <polygon points="12 2 2 7 12 12 22 7 12 2" />
+                                <polyline points="2 17 12 22 22 17" />
+                                <polyline points="2 12 12 17 22 12" />
+                            </svg>
+                        </div>
+                        <h4>Adaptacja</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-inner">
+                <a href="https://www.youtube.com/shorts/5g4wondwAvE" target="_blank" class="stats-video">
+                    <img src="https://img.youtube.com/vi/5g4wondwAvE/maxresdefault.jpg" alt="BMW M5 Video">
+                    <div class="play-button">
+                        <svg viewBox="0 0 24 24">
+                            <polygon points="5 3 19 12 5 21 5 3" />
+                        </svg>
+                    </div>
+                </a>
+                <div class="stats-content">
+                    <h2>Jak Pracuję</h2>
+                    <p class="stats-description">Jeden dzień zdjęciowy z BMW M5 E60 dla Sure
+                        Classics wygenerował 7.5
+                        miliona wyświetleń na trzech platformach. Ciekawostkowy, informacyjny
+                        materiał, który zatrzymuje
+                        scrollowanie.</p>
+                    <div class="stats-list">
+                        <div class="stat-item">
+                            <svg viewBox="0 0 24 24">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                            <span>5 rolek z 1 dnia</span>
+                        </div>
+                        <div class="stat-item">
+                            <svg viewBox="0 0 24 24">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                            <span>3 platformy</span>
+                        </div>
+                        <div class="stat-item">
+                            <svg viewBox="0 0 24 24">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                            <span>Dźwięk silnika</span>
+                        </div>
+                        <div class="stat-item">
+                            <svg viewBox="0 0 24 24">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                            <span>Emocje i detale</span>
+                        </div>
+                        <div class="stat-item">
+                            <svg viewBox="0 0 24 24">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                            <span>Spójny branding</span>
+                        </div>
+                        <div class="stat-item">
+                            <svg viewBox="0 0 24 24">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                            <span>Optymalizacja SEO</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="big-numbers" id="wyniki">
+        <div class="container">
+            <div class="numbers-grid">
+                <div class="number-item">
+                    <h3>7.5M</h3>
+                    <p>Wyświetleń</p>
+                </div>
+                <div class="number-item">
+                    <h3>5</h3>
+                    <p>Rolek</p>
+                </div>
+                <div class="number-item">
+                    <h3>3</h3>
+                    <p>Platformy</p>
+                </div>
+                <div class="number-item">
+                    <h3>+121%</h3>
+                    <p>Wzrost</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="clients">
+        <div class="container">
+            <h3>Zaufali mi</h3>
+            <div class="clients-grid">
+                <div class="client-logo">SURE CLASSICS</div>
+                <div class="client-logo">STRADALE</div>
+                <div class="client-logo">RAM FACTORY</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-tag">Portfolio</p>
+                <h2>Najlepsze Realizacje</h2>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-card">
+                    <div class="portfolio-thumb">
+                        <video src="bmw_m5_youtube.mp4" poster="thumb_yt.webp" controls playsinline></video>
+                        <span class="portfolio-badge">Top Performer</span>
+                        <span class="portfolio-views">2.69M</span>
+                    </div>
+                    <div class="portfolio-info">
+                        <p class="portfolio-client">Sure Classics</p>
+                        <h3 class="portfolio-title">BMW M5 - jak to auto kopie!</h3>
+                        <p class="portfolio-scope">Koncepcja • Produkcja • Postprodukcja</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-card">
+                    <div class="portfolio-thumb">
+                        <video src="bmw_m5_tiktok.mp4" poster="thumb_tiktok.jpg" controls playsinline></video>
+                        <span class="portfolio-views">936K</span>
+                    </div>
+                    <div class="portfolio-info">
+                        <p class="portfolio-client">Sure Classics</p>
+                        <h3 class="portfolio-title">BMW M5 TikTok</h3>
+                        <p class="portfolio-scope">Adaptacja formatu</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-card">
+                    <div class="portfolio-thumb">
+                        <video src="bmw_m5_instagram.mp4" poster="thumb_insta.jpg" controls playsinline></video>
+                        <span class="portfolio-views">885K</span>
+                    </div>
+                    <div class="portfolio-info">
+                        <p class="portfolio-client">Sure Classics</p>
+                        <h3 class="portfolio-title">Spalanie w BMW M5?</h3>
+                        <p class="portfolio-scope">Instagram Reel</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-banner" id="kontakt">
+        <div class="container">
+            <p class="cta-tag">Zacznijmy współpracę</p>
+            <h2>Gotowy na miliony wyświetleń?</h2>
+            <a href="mailto:jakubkubacki.g@gmail.com" class="btn btn-primary">Napisz do mnie</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <div class="logo-icon">
+                            <svg viewBox="0 0 24 24">
+                                <polygon points="5 3 19 12 5 21 5 3" />
+                            </svg>
+                        </div>
+                        <span>JAKUB KUBACKI</span>
+                    </a>
+                    <p>Profesjonalna produkcja wideo dla branży motoryzacyjnej. Rolki, które
+                        generują miliony
+                        wyświetleń.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link">
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link">
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Usługi</h4>
+                    <ul>
+                        <li><a href="#uslugi">Koncepcja</a></li>
+                        <li><a href="#uslugi">Nagranie</a></li>
+                        <li><a href="#uslugi">Montaż</a></li>
+                        <li><a href="#uslugi">Adaptacja</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Portfolio</h4>
+                    <ul>
+                        <li><a href="#portfolio">Sure Classics</a></li>
+                        <li><a href="#portfolio">STRADALE</a></li>
+                        <li><a href="#portfolio">RAM Factory</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Kontakt</h4>
+                    <div class="contact-item">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                            <circle cx="12" cy="10" r="3" />
+                        </svg>
+                        <span>Warszawa, Polska</span>
+                    </div>
+                    <div class="contact-item">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                            <polyline points="22,6 12,13 2,6" />
+                        </svg>
+                        <a href="mailto:jakubkubacki.g@gmail.com">jakubkubacki.g@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 Jakub Kubacki. Wszelkie prawa zastrzeżone.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
