@@ -139,6 +139,23 @@ nav {
     color: var(--orange);
 }
 
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.nav-phone {
+    font-weight: 600;
+    color: var(--white);
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+.nav-phone:hover {
+    color: var(--orange);
+}
+
 /* HERO SECTION */
 .hero {
     position: relative;
