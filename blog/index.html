@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Blog o wideo marketingu w branży motoryzacyjnej. Porady, case studies i strategie dla dealerów i salonów.">
+    <title>Blog | FilmujAuto.pl</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        /* Blog Specific Overrides */
+        .hero {
+            min-height: 400px;
+            height: 50vh;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .article-card {
+            background: var(--dark);
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .article-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--orange);
+        }
+
+        .article-thumb {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+        }
+
+        .article-content {
+            padding: 30px;
+        }
+
+        .article-tag {
+            color: var(--orange);
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .article-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .article-excerpt {
+            color: var(--gray);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .article-link {
+            color: var(--white);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: color 0.3s;
+        }
+
+        .article-link:hover {
+            color: var(--orange);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="container nav-inner">
+            <a href="../index.html" class="logo">
+                <span>//</span>FilmujAuto.pl
+            </a>
+            <ul class="nav-links">
+                <li><a href="../index.html#proces">Proces</a></li>
+                <li><a href="../index.html#portfolio">Portfolio</a></li>
+                <li><a href="../index.html#oferta">Oferta</a></li>
+                <li><a href="../index.html#o-mnie">O mnie</a></li>
+                <li><a href="index.html" class="text-orange">Blog</a></li>
+            </ul>
+            <a href="../index.html#kontakt" class="btn btn-primary" style="padding: 10px 24px;">Kontakt</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="container hero-content" style="grid-template-columns: 1fr; text-align: center;">
+            <div data-aos="fade-up" class="hero-text" style="margin: 0 auto;">
+                <h1>Wiedza o <br><span>Wideo Marketingu</span></h1>
+                <p>Jak sprzedawać samochody używając kamery? Praktyczne porady.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOG GRID -->
+    <section class="section-padding" style="background: var(--black);">
+        <div class="container">
+            <div class="section-header">
+                <h2>Najnowsze Artykuły</h2>
+            </div>
+
+            <div class="blog-grid">
+                <!-- Article 1 -->
+                <article class="article-card" data-aos="fade-up">
+                    <a href="filmowanie-samochodow-warszawa.html">
+                        <!-- Placeholder - using generic or extracted image if available, else standard placeholder -->
+                        <div class="article-thumb"
+                            style="background: linear-gradient(45deg, #111, #222); display: flex; align-items: center; justify-content: center;">
+                            <span style="font-size: 3rem;">🚗</span>
+                        </div>
+                    </a>
+                    <div class="article-content">
+                        <span class="article-tag">Strategia</span>
+                        <h3 class="article-title"><a href="filmowanie-samochodow-warszawa.html">Dlaczego warszawskie
+                                salony wybierają lokalnych twórców?</a></h3>
+                        <p class="article-excerpt">Rynek w stolicy jest specyficzny. Zobacz, dlaczego warto postawić na
+                            videografa, który czuje klimat miasta.</p>
+                        <a href="filmowanie-samochodow-warszawa.html" class="article-link">Czytaj dalej &rarr;</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-cols">
+                <div>
+                    <a href="../index.html" class="logo"
+                        style="margin-bottom: 20px; display:inline-block"><span>//</span>FilmujAuto.pl</a>
+                    <p style="color: var(--gray); max-width: 300px;">Profesjonalna produkcja wideo dla pasjonatów
+                        motoryzacji, salonów i warsztatów.</p>
+                </div>
+                <div>
+                    <h4 style="margin-bottom: 20px;">Menu</h4>
+                    <ul style="line-height: 2;">
+                        <li><a href="../index.html#portfolio" style="color:var(--gray)">Portfolio</a></li>
+                        <li><a href="../index.html#oferta" style="color:var(--gray)">Cennik</a></li>
+                        <li><a href="index.html" style="color:var(--gray)">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="margin-bottom: 20px;">Kontakt</h4>
+                    <p style="color:var(--gray)">kontakt@filmujauto.pl</p>
+                    <p style="color:var(--gray)">+48 123 456 789</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2024 FilmujAuto.pl. Wszelkie prawa zastrzeżone.
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+    </script>
+</body>
+
+</html>
