@@ -267,22 +267,33 @@ h1 span {
     }
 }
 
-.phone-frame {
-    width: 280px;
-    height: 560px;
-    background: #1a1a1a;
-    border: 12px solid #333;
-    border-radius: 40px;
+/* HERO VISUAL MOCKUP */
+.hero-visual {
     position: relative;
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5), 0 0 30px rgba(255, 107, 0, 0.2);
-    overflow: hidden;
-    transform: rotateY(-8deg) rotateX(2deg);
-    /* REFINED PERSPECTIVE */
-    transition: transform 0.5s ease;
+    /* Ensure z-index is handled */
+    z-index: 5;
+    /* Perspective for 3D */
+    perspective: 1000px;
 }
 
-.phone-frame:hover {
-    transform: rotateY(0) rotateX(0);
+.phone-frame.tiktok-mockup {
+    width: 320px;
+    height: 640px;
+    background: #000;
+    border: 14px solid #222;
+    border-radius: 48px;
+    position: relative;
+    box-shadow:
+        0 40px 80px rgba(0, 0, 0, 0.6),
+        0 0 40px rgba(255, 107, 0, 0.15),
+        inset 0 0 20px rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    transform: rotateY(-12deg) rotateX(5deg);
+    transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.tiktok-mockup:hover {
+    transform: rotateY(-8deg) rotateX(2deg) scale(1.02);
 }
 
 .notch {
@@ -290,10 +301,10 @@ h1 span {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 120px;
-    height: 25px;
-    background: #333;
-    border-radius: 0 0 16px 16px;
+    width: 140px;
+    height: 30px;
+    background: #222;
+    border-radius: 0 0 18px 18px;
     z-index: 10;
 }
 
@@ -301,6 +312,159 @@ h1 span {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    /* Darken image slightly */
+    filter: brightness(0.85);
+}
+
+/* TikTok Overlay UI */
+.tiktok-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 30px 20px 60px;
+    color: white;
+}
+
+.tiktok-stat {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+}
+
+.tiktok-stat span {
+    font-size: 1rem;
+    font-weight: 500;
+    opacity: 0.9;
+    margin-top: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.tiktok-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+}
+
+.icon-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.icon-group svg {
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+    transition: transform 0.2s;
+}
+
+.icon-group:hover svg {
+    transform: scale(1.15);
+}
+
+.icon-group span {
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+
+/* Floating Badges */
+.floating-badge {
+    position: absolute;
+    background: rgba(30, 30, 30, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 12px 20px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 20;
+    animation: floatBadge 6s ease-in-out infinite;
+    min-width: 180px;
+}
+
+.badge-top {
+    top: 60px;
+    left: -60px;
+    animation-delay: 0s;
+}
+
+.badge-bottom {
+    bottom: 80px;
+    right: -40px;
+    animation-delay: 2s;
+}
+
+.badge-icon {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 107, 0, 0.15);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.badge-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.badge-title {
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: var(--white);
+    line-height: 1.1;
+}
+
+.badge-sub {
+    font-size: 0.75rem;
+    color: var(--gray);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+@keyframes floatBadge {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+.fire-icon {
+    animation: flicker 1.5s infinite alternate;
+}
+
+@keyframes flicker {
+    0% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 5px rgba(255, 107, 0, 0.5));
+    }
+
+    100% {
+        transform: scale(1.1);
+        filter: drop-shadow(0 0 15px rgba(255, 107, 0, 0.8));
+    }
 }
 
 
@@ -607,6 +771,66 @@ h1 span {
     color: var(--gray);
 }
 
+/* TESTIMONIALS */
+.testimonials {
+    background: var(--black);
+    position: relative;
+    /* subtle separation */
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.testimonials-grid {
+    display: flex;
+    justify-content: center;
+}
+
+.testimonial-card {
+    background: var(--dark);
+    padding: 50px;
+    border-radius: 24px;
+    max-width: 800px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+    text-align: center;
+}
+
+.testimonial-icon {
+    font-size: 4rem;
+    color: var(--orange);
+    line-height: 1;
+    margin-bottom: 24px;
+    font-family: serif;
+    opacity: 0.5;
+}
+
+.testimonial-text {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--gray-light);
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+.testimonial-author {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    display: inline-block;
+}
+
+.author-name {
+    display: block;
+    font-weight: 700;
+    color: var(--white);
+    font-size: 1.1rem;
+}
+
+.author-role {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--orange);
+    margin-top: 4px;
+}
+
 /* FAQ */
 .faq {
     background: var(--dark);
@@ -725,6 +949,82 @@ textarea.form-control {
     font-size: 0.9rem;
     color: var(--gray);
     line-height: 1.4;
+}
+
+/* Pulse Tag for Scroll Stop */
+.pulse-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: rgba(249, 115, 22, 0.1);
+    border: 1px solid rgba(249, 115, 22, 0.2);
+    border-radius: 50px;
+    color: var(--orange);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 24px;
+}
+
+.pulse-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--orange);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.4);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(249, 115, 22, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(249, 115, 22, 0);
+    }
+}
+
+/* Card Stats */
+.card-stat {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--white);
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--gray);
+    letter-spacing: 1px;
+    margin-top: 5px;
+}
+
+.card-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: var(--orange);
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.card-link:hover {
+    transform: translateX(5px);
+}
+
+.problem-card h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 /* FOOTER */
