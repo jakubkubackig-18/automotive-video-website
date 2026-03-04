@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AURORA Trolley – Pro Edition – Elipsa Pro</title>
+    <title>Motorcycle Shelf (90) – Elipsa Pro</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -24,6 +24,7 @@
             line-height: 1.6
         }
 
+        /* RED TOP BAR */
         .announcement-bar {
             background: #e51d20;
             color: #fff;
@@ -42,6 +43,7 @@
             letter-spacing: .5px
         }
 
+        /* HEADER */
         .site-header {
             background: #fff;
             padding: 16px 40px;
@@ -108,6 +110,7 @@
             height: 20px
         }
 
+        /* BREADCRUMB */
         .breadcrumb {
             padding: 16px 40px;
             font-size: 13px;
@@ -128,6 +131,7 @@
             font-weight: 500
         }
 
+        /* PRODUCT LAYOUT */
         .product-section {
             max-width: 1200px;
             margin: 0 auto;
@@ -138,6 +142,7 @@
             align-items: start
         }
 
+        /* GALLERY */
         .gallery-wrap {
             position: relative
         }
@@ -215,6 +220,7 @@
             object-fit: cover
         }
 
+        /* PRODUCT INFO */
         .product-title {
             font-size: 28px;
             font-weight: 700;
@@ -251,6 +257,7 @@
             margin-bottom: 20px
         }
 
+        /* QTY + ADD TO CART */
         .add-row {
             display: flex;
             gap: 12px;
@@ -310,6 +317,7 @@
             background: #c81a1d
         }
 
+        /* ACCORDION */
         .accordion {
             margin-top: 10px
         }
@@ -378,6 +386,7 @@
             transform: rotate(180deg)
         }
 
+        /* SOCIAL SIDEBAR */
         .social-sidebar {
             position: fixed;
             left: 0;
@@ -409,6 +418,7 @@
             border-radius: 0 0 6px 0
         }
 
+        /* RELATED PRODUCTS */
         .related-section {
             background: #111;
             padding: 50px 40px;
@@ -470,6 +480,7 @@
             color: #e51d20
         }
 
+        /* FOOTER */
         .site-footer {
             background: #111;
             color: #ccc;
@@ -545,6 +556,7 @@
             color: #555
         }
 
+        /* RESPONSIVE */
         @media(max-width:900px) {
             .product-section {
                 grid-template-columns: 1fr;
@@ -576,11 +588,13 @@
 
 <body>
 
+    <!-- RED TOP BAR -->
     <div class="announcement-bar">
         <span>Pre-order</span>
         <a href="#">SHOP NOW</a>
     </div>
 
+    <!-- HEADER -->
     <header class="site-header">
         <a href="https://elipsa.pro" class="site-logo">elipsa<span class="dot">.</span>pro</a>
         <div class="main-nav">
@@ -616,10 +630,12 @@
         </div>
     </header>
 
+    <!-- BREADCRUMB -->
     <div class="breadcrumb">
-        <a href="#">Home</a> / <a href="#">Products</a> / <span class="current">AURORA Trolley – Pro Edition</span>
+        <a href="#">Home</a> / <a href="#">Products</a> / <span class="current">Motorcycle Shelf (90)</span>
     </div>
 
+    <!-- SOCIAL SIDEBAR -->
     <div class="social-sidebar">
         <a href="#" class="ig">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2">
@@ -636,36 +652,42 @@
         </a>
     </div>
 
+    <!-- PRODUCT SECTION -->
     <div class="product-section">
+
+        <!-- GALLERY -->
         <div class="gallery-wrap">
             <div class="gallery-main">
                 <button class="gallery-arrow prev" onclick="navGallery(-1)">‹</button>
-                <img id="main-img" src="stand-drugi-1.jpeg" alt="AURORA Trolley – Pro Edition">
+                <img id="main-img" src="polka-1.jpeg" alt="Motorcycle Shelf (90)">
                 <button class="gallery-arrow next" onclick="navGallery(1)">›</button>
             </div>
             <div class="gallery-thumbs">
                 <div class="thumb active" onclick="switchImage(0, this)">
-                    <img src="stand-drugi-1.jpeg" alt="">
+                    <img src="polka-1.jpeg" alt="">
                 </div>
                 <div class="thumb" onclick="switchImage(1, this)">
-                    <img src="stand-drugi-2.jpeg" alt="">
+                    <img src="polka-2.jpeg" alt="">
                 </div>
                 <div class="thumb" onclick="switchImage(2, this)">
-                    <img src="stand-drugi-3.jpeg" alt="">
+                    <img src="polka-3.jpeg" alt="">
+                </div>
+                <div class="thumb" onclick="switchImage(3, this)">
+                    <img src="polka-4.jpeg" alt="">
                 </div>
             </div>
         </div>
 
+        <!-- PRODUCT INFO -->
         <div class="product-info">
-            <h1 class="product-title">AURORA Trolley – Pro Edition</h1>
+            <h1 class="product-title">Motorcycle Shelf (90)</h1>
 
-            <div class="price">1 490,00 €</div>
-            <div class="price-note">Previous lowest price was 1 490,00 €.</div>
+            <div class="price">79,00 €</div>
+            <div class="price-note">Previous lowest price was 79,00 €.</div>
 
             <div class="short-desc">
-                The AURORA Trolley Pro Edition takes motorcycle storage to the next level. Featuring an extended
-                platform and reinforced chassis, it's designed for heavier bikes and professional workshop environments.
-                Premium powder-coated finish with laser-engraved Elipsa branding.
+                Add a touch of motorcycle style to your home with the ELIPSA shelf – the perfect combination of
+                aesthetics and functionality!
             </div>
 
             <div class="delivery-note">Delivery in 4 weeks</div>
@@ -679,6 +701,7 @@
                 <button class="btn-cart">Add to cart</button>
             </div>
 
+            <!-- ACCORDIONS -->
             <div class="accordion">
                 <div class="accordion-item">
                     <div class="accordion-header" onclick="toggleAccordion(this)">
@@ -690,13 +713,13 @@
                     </div>
                     <div class="accordion-body">
                         <div class="accordion-body-inner">
-                            <p>The Pro Edition features an extended rail platform with reinforced steel construction,
-                                providing maximum stability for motorcycles up to 450 kg. Industrial-grade locking
-                                castors allow effortless repositioning in any workshop or showroom environment.</p>
+                            <p>Bring modern style to your interior with the ELIPSA motorcycle shelf, which combines
+                                functionality with elegance. This minimalist shelf is perfect for displaying your
+                                motorcycle accessories, helmets, or decorative items.</p>
                             <br>
-                            <p>The matte black powder-coated finish is scratch-resistant and built to endure daily
-                                professional use. Adjustable rear wheel cradle accommodates tire widths from 120 mm to
-                                240 mm.</p>
+                            <p>The ELIPSA shelf is the perfect solution for motorcycle enthusiasts who want to stylishly
+                                store their accessories. It's also a great way to showcase your passion for motorcycles
+                                in your living space.</p>
                         </div>
                     </div>
                 </div>
@@ -719,6 +742,7 @@
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 
@@ -727,21 +751,21 @@
         <div class="related-inner">
             <h3>You may also like</h3>
             <div class="related-grid">
-                <a class="related-card" href="oferta-statera.html">
+                <a class="related-card" href="aurora-stand.html">
                     <img src="stand-1.jpeg" alt="AURORA Motorcycle Stand">
                     <div class="card-body">
                         <div class="card-name">AURORA Motorcycle Stand</div>
                         <div class="card-price">1 290,00 €</div>
                     </div>
                 </a>
-                <a class="related-card" href="oferta-polka.html">
-                    <img src="polka-1.jpeg" alt="Motorcycle Shelf">
+                <a class="related-card" href="aurora-stand.html">
+                    <img src="stand-drugi-1.jpeg" alt="AURORA Trolley">
                     <div class="card-body">
-                        <div class="card-name">Motorcycle Shelf (90)</div>
-                        <div class="card-price">79,00 €</div>
+                        <div class="card-name">AURORA Trolley – Pro Edition</div>
+                        <div class="card-price">1 490,00 €</div>
                     </div>
                 </a>
-                <a class="related-card" href="oferta-statera.html">
+                <a class="related-card" href="aurora-stand.html">
                     <img src="kask-pokla-2.jpeg" alt="Helmet Shelf">
                     <div class="card-body">
                         <div class="card-name">ELIPSA Helmet Shelf</div>
@@ -752,6 +776,7 @@
         </div>
     </div>
 
+    <!-- FOOTER -->
     <footer class="site-footer">
         <div class="footer-grid">
             <div class="footer-contact">
@@ -794,7 +819,7 @@
     </footer>
 
     <script>
-        const images = ['stand-drugi-1.jpeg', 'stand-drugi-2.jpeg', 'stand-drugi-3.jpeg'];
+        const images = ['polka-1.jpeg', 'polka-2.jpeg', 'polka-3.jpeg', 'polka-4.jpeg'];
         let currentIdx = 0;
 
         function switchImage(idx, el) {

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SENA Helmet Hanger – Elipsa Pro</title>
+    <title>AURORA Motorcycle Stand – Elipsa Pro</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -13,7 +13,7 @@
         *::after {
             box-sizing: border-box;
             margin: 0;
-            padding: 0
+            padding: 0;
         }
 
         body {
@@ -21,9 +21,10 @@
             background: #fff;
             color: #333;
             font-size: 15px;
-            line-height: 1.6
+            line-height: 1.6;
         }
 
+        /* ── RED TOP BAR ── */
         .announcement-bar {
             background: #e51d20;
             color: #fff;
@@ -32,23 +33,24 @@
             justify-content: space-between;
             align-items: center;
             font-size: 13px;
-            font-weight: 500
+            font-weight: 500;
         }
 
         .announcement-bar a {
             color: #fff;
             text-decoration: none;
             font-weight: 700;
-            letter-spacing: .5px
+            letter-spacing: 0.5px;
         }
 
+        /* ── HEADER / NAV ── */
         .site-header {
             background: #fff;
             padding: 16px 40px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            border-bottom: 1px solid #eee
+            border-bottom: 1px solid #eee;
         }
 
         .site-logo {
@@ -57,17 +59,17 @@
             font-style: italic;
             color: #111;
             text-decoration: none;
-            letter-spacing: -.5px
+            letter-spacing: -0.5px;
         }
 
         .site-logo .dot {
-            color: #e51d20
+            color: #e51d20;
         }
 
         .main-nav {
             display: flex;
             align-items: center;
-            gap: 32px
+            gap: 32px;
         }
 
         .main-nav a {
@@ -75,22 +77,22 @@
             text-decoration: none;
             font-size: 15px;
             font-weight: 500;
-            transition: color .2s
+            transition: color .2s;
         }
 
         .main-nav a:hover {
-            color: #e51d20
+            color: #e51d20;
         }
 
         .main-nav .active {
             color: #e51d20;
-            font-weight: 600
+            font-weight: 600;
         }
 
         .header-icons {
             display: flex;
             align-items: center;
-            gap: 20px
+            gap: 20px;
         }
 
         .header-icons a {
@@ -100,34 +102,36 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 2px
+            gap: 2px;
         }
 
         .header-icons svg {
             width: 20px;
-            height: 20px
+            height: 20px;
         }
 
+        /* ── BREADCRUMB ── */
         .breadcrumb {
             padding: 16px 40px;
             font-size: 13px;
-            color: #888
+            color: #888;
         }
 
         .breadcrumb a {
             color: #888;
-            text-decoration: none
+            text-decoration: none;
         }
 
         .breadcrumb a:hover {
-            color: #e51d20
+            color: #e51d20;
         }
 
         .breadcrumb .current {
             color: #e51d20;
-            font-weight: 500
+            font-weight: 500;
         }
 
+        /* ── PRODUCT LAYOUT ── */
         .product-section {
             max-width: 1200px;
             margin: 0 auto;
@@ -135,11 +139,12 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 50px;
-            align-items: start
+            align-items: start;
         }
 
+        /* ── GALLERY ── */
         .gallery-wrap {
-            position: relative
+            position: relative;
         }
 
         .gallery-main {
@@ -147,13 +152,13 @@
             aspect-ratio: 1;
             overflow: hidden;
             position: relative;
-            background: #f8f8f8
+            background: #f8f8f8;
         }
 
         .gallery-main img {
             width: 100%;
             height: 100%;
-            object-fit: contain
+            object-fit: contain;
         }
 
         .gallery-arrow {
@@ -171,26 +176,26 @@
             font-size: 16px;
             color: #333;
             z-index: 5;
-            transition: border-color .2s, box-shadow .2s
+            transition: border-color .2s, box-shadow .2s;
         }
 
         .gallery-arrow:hover {
             border-color: #e51d20;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, .1)
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
 
         .gallery-arrow.prev {
-            left: 12px
+            left: 12px;
         }
 
         .gallery-arrow.next {
-            right: 12px
+            right: 12px;
         }
 
         .gallery-thumbs {
             display: flex;
             gap: 10px;
-            margin-top: 16px
+            margin-top: 16px;
         }
 
         .gallery-thumbs .thumb {
@@ -201,46 +206,49 @@
             cursor: pointer;
             border: 2px solid transparent;
             transition: border-color .2s;
-            background: #f8f8f8
+            background: #f8f8f8;
         }
 
         .gallery-thumbs .thumb:hover,
         .gallery-thumbs .thumb.active {
-            border-color: #e51d20
+            border-color: #e51d20;
         }
 
         .gallery-thumbs .thumb img {
             width: 100%;
             height: 100%;
-            object-fit: cover
+            object-fit: cover;
         }
+
+        /* ── RIGHT: PRODUCT INFO ── */
+        .product-info {}
 
         .product-title {
             font-size: 28px;
             font-weight: 700;
             color: #111;
             line-height: 1.3;
-            margin-bottom: 16px
+            margin-bottom: 16px;
         }
 
         .price {
             font-size: 22px;
             font-weight: 700;
             color: #e51d20;
-            margin-bottom: 4px
+            margin-bottom: 4px;
         }
 
         .price-note {
             font-size: 12px;
             color: #999;
-            margin-bottom: 20px
+            margin-bottom: 20px;
         }
 
         .short-desc {
             font-size: 14px;
             color: #555;
             line-height: 1.7;
-            margin-bottom: 24px
+            margin-bottom: 24px;
         }
 
         .delivery-note {
@@ -248,14 +256,15 @@
             font-size: 14px;
             font-weight: 500;
             font-style: italic;
-            margin-bottom: 20px
+            margin-bottom: 20px;
         }
 
+        /* ── QTY + ADD TO CART ── */
         .add-row {
             display: flex;
             gap: 12px;
             align-items: center;
-            margin-bottom: 30px
+            margin-bottom: 30px;
         }
 
         .qty-box {
@@ -263,7 +272,7 @@
             align-items: center;
             border: 1px solid #ddd;
             border-radius: 4px;
-            overflow: hidden
+            overflow: hidden;
         }
 
         .qty-box button {
@@ -274,11 +283,11 @@
             font-size: 18px;
             color: #555;
             cursor: pointer;
-            transition: background .15s
+            transition: background .15s;
         }
 
         .qty-box button:hover {
-            background: #f0f0f0
+            background: #f0f0f0;
         }
 
         .qty-box input {
@@ -290,7 +299,7 @@
             height: 44px;
             font-size: 15px;
             font-family: inherit;
-            color: #333
+            color: #333;
         }
 
         .btn-cart {
@@ -303,22 +312,23 @@
             font-size: 15px;
             font-weight: 600;
             cursor: pointer;
-            transition: background .2s
+            transition: background .2s;
         }
 
         .btn-cart:hover {
-            background: #c81a1d
+            background: #c81a1d;
         }
 
+        /* ── ACCORDION ── */
         .accordion {
-            margin-top: 10px
+            margin-top: 10px;
         }
 
         .accordion-item {
             border: 1px solid #eee;
             border-radius: 6px;
             margin-bottom: 10px;
-            overflow: hidden
+            overflow: hidden;
         }
 
         .accordion-header {
@@ -328,11 +338,11 @@
             padding: 16px 20px;
             cursor: pointer;
             background: #fff;
-            transition: background .15s
+            transition: background .15s;
         }
 
         .accordion-header:hover {
-            background: #fafafa
+            background: #fafafa;
         }
 
         .accordion-title {
@@ -341,43 +351,44 @@
             gap: 10px;
             font-size: 15px;
             font-weight: 600;
-            color: #111
+            color: #111;
         }
 
         .accordion-title .red-dot {
             width: 8px;
             height: 8px;
             background: #e51d20;
-            border-radius: 2px
+            border-radius: 2px;
         }
 
         .accordion-arrow {
             font-size: 18px;
             color: #999;
-            transition: transform .3s
+            transition: transform .3s;
         }
 
         .accordion-body {
             max-height: 0;
             overflow: hidden;
-            transition: max-height .35s ease
+            transition: max-height .35s ease;
         }
 
         .accordion-body-inner {
             padding: 0 20px 20px;
             font-size: 14px;
             color: #555;
-            line-height: 1.7
+            line-height: 1.7;
         }
 
         .accordion-item.open .accordion-body {
-            max-height: 600px
+            max-height: 600px;
         }
 
         .accordion-item.open .accordion-arrow {
-            transform: rotate(180deg)
+            transform: rotate(180deg);
         }
 
+        /* ── SOCIAL SIDEBAR ── */
         .social-sidebar {
             position: fixed;
             left: 0;
@@ -386,7 +397,7 @@
             display: flex;
             flex-direction: column;
             gap: 0;
-            z-index: 50
+            z-index: 50;
         }
 
         .social-sidebar a {
@@ -396,84 +407,25 @@
             place-items: center;
             color: #fff;
             font-size: 16px;
-            text-decoration: none
+            text-decoration: none;
         }
 
         .social-sidebar .ig {
             background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-            border-radius: 0 6px 0 0
+            border-radius: 0 6px 0 0;
         }
 
         .social-sidebar .tk {
             background: #010101;
-            border-radius: 0 0 6px 0
+            border-radius: 0 0 6px 0;
         }
 
-        .related-section {
-            background: #111;
-            padding: 50px 40px;
-            margin-top: 60px
-        }
-
-        .related-inner {
-            max-width: 1200px;
-            margin: 0 auto
-        }
-
-        .related-section h3 {
-            font-size: 20px;
-            font-weight: 700;
-            color: #fff;
-            margin-bottom: 28px
-        }
-
-        .related-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px
-        }
-
-        .related-card {
-            background: #1a1a1c;
-            border-radius: 10px;
-            overflow: hidden;
-            transition: transform .2s;
-            cursor: pointer;
-            text-decoration: none
-        }
-
-        .related-card:hover {
-            transform: translateY(-4px)
-        }
-
-        .related-card img {
-            width: 100%;
-            aspect-ratio: 4/3;
-            object-fit: cover;
-            display: block
-        }
-
-        .related-card .card-body {
-            padding: 16px 18px
-        }
-
-        .related-card .card-name {
-            font-size: 14px;
-            font-weight: 600;
-            color: #fff;
-            margin-bottom: 6px
-        }
-
-        .related-card .card-price {
-            font-size: 15px;
-            font-weight: 700;
-            color: #e51d20
-        }
-
+        /* ── FOOTER ── */
         .site-footer {
             background: #111;
             color: #ccc;
-            padding: 50px 40px 30px
+            padding: 50px 40px 30px;
+            margin-top: 60px;
         }
 
         .footer-grid {
@@ -481,7 +433,7 @@
             margin: 0 auto;
             display: grid;
             grid-template-columns: 1.2fr 1fr 1fr;
-            gap: 40px
+            gap: 40px;
         }
 
         .footer-grid h4 {
@@ -490,19 +442,19 @@
             font-weight: 700;
             margin-bottom: 16px;
             text-transform: uppercase;
-            letter-spacing: 1px
+            letter-spacing: 1px;
         }
 
         .footer-contact p {
             font-size: 14px;
-            margin-bottom: 6px
+            margin-bottom: 6px;
         }
 
         .footer-contact .email {
             font-size: 18px;
             font-weight: 600;
             color: #fff;
-            margin-top: 6px
+            margin-top: 6px;
         }
 
         .footer-links a {
@@ -511,17 +463,17 @@
             text-decoration: none;
             font-size: 13px;
             padding: 3px 0;
-            transition: color .2s
+            transition: color .2s;
         }
 
         .footer-links a:hover {
-            color: #fff
+            color: #fff;
         }
 
         .footer-social {
             display: flex;
             gap: 12px;
-            margin-top: 12px
+            margin-top: 12px;
         }
 
         .footer-social a {
@@ -532,7 +484,7 @@
             border-radius: 4px;
             color: #fff;
             font-size: 14px;
-            text-decoration: none
+            text-decoration: none;
         }
 
         .footer-bottom {
@@ -542,33 +494,97 @@
             border-top: 1px solid #222;
             text-align: center;
             font-size: 11px;
-            color: #555
+            color: #555;
         }
 
-        @media(max-width:900px) {
+        /* ── RELATED PRODUCTS ── */
+        .related-section {
+            background: #111;
+            padding: 50px 40px;
+            margin-top: 60px;
+        }
+
+        .related-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .related-section h3 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 28px;
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .related-card {
+            background: #1a1a1c;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform .2s;
+            cursor: pointer;
+            text-decoration: none;
+            display: block;
+        }
+
+        .related-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .related-card img {
+            width: 100%;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+            display: block;
+        }
+
+        .related-card .card-body {
+            padding: 16px 18px;
+        }
+
+        .related-card .card-name {
+            font-size: 14px;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 6px;
+        }
+
+        .related-card .card-price {
+            font-size: 15px;
+            font-weight: 700;
+            color: #e51d20;
+        }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 900px) {
             .product-section {
                 grid-template-columns: 1fr;
-                gap: 30px
+                gap: 30px;
             }
 
             .footer-grid {
-                grid-template-columns: 1fr
+                grid-template-columns: 1fr;
             }
 
             .main-nav {
-                display: none
+                display: none;
             }
 
             .site-header {
-                padding: 12px 20px
+                padding: 12px 20px;
             }
 
             .product-section {
-                padding: 10px 20px 40px
+                padding: 10px 20px 40px;
             }
 
             .related-grid {
-                grid-template-columns: 1fr
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -576,11 +592,13 @@
 
 <body>
 
+    <!-- RED TOP BAR -->
     <div class="announcement-bar">
         <span>Pre-order</span>
         <a href="#">SHOP NOW</a>
     </div>
 
+    <!-- HEADER -->
     <header class="site-header">
         <a href="https://elipsa.pro" class="site-logo">elipsa<span class="dot">.</span>pro</a>
         <div class="main-nav">
@@ -590,64 +608,91 @@
             <a href="#">FAQ</a>
         </div>
         <div class="header-icons">
-            <a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <a href="#">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
                     <circle cx="12" cy="12" r="10" />
                     <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
                     <line x1="12" y1="17" x2="12.01" y2="17" />
-                </svg><span>Help</span></a>
-            <a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                </svg>
+                <span>Help</span>
+            </a>
+            <a href="#">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
                     <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
                     <circle cx="12" cy="7" r="4" />
-                </svg><span>Account</span></a>
-            <a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                </svg>
+                <span>Account</span>
+            </a>
+            <a href="#">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
                     <circle cx="9" cy="21" r="1" />
                     <circle cx="20" cy="21" r="1" />
                     <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
-                </svg><span>Cart</span></a>
+                </svg>
+                <span>Cart</span>
+            </a>
         </div>
     </header>
 
+    <!-- BREADCRUMB -->
     <div class="breadcrumb">
-        <a href="#">Home</a> / <a href="#">Products</a> / <span class="current">SENA Helmet Hanger</span>
+        <a href="#">Home</a> / <a href="#">Products</a> / <span class="current">AURORA Motorcycle Stand</span>
     </div>
 
+    <!-- SOCIAL SIDEBAR -->
     <div class="social-sidebar">
-        <a href="#" class="ig"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff"
-                stroke-width="2">
+        <a href="#" class="ig">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2">
                 <rect x="2" y="2" width="20" height="20" rx="5" />
                 <circle cx="12" cy="12" r="5" />
                 <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
-            </svg></a>
-        <a href="#" class="tk"><svg width="16" height="16" viewBox="0 0 24 24" fill="#fff">
+            </svg>
+        </a>
+        <a href="#" class="tk">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#fff">
                 <path
                     d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2 6.34 6.34 0 009.49 21.5a6.34 6.34 0 006.34-6.34V8.67a8.21 8.21 0 004.77 1.52V6.74a4.86 4.86 0 01-1.01-.05z" />
-            </svg></a>
+            </svg>
+        </a>
     </div>
 
+    <!-- PRODUCT SECTION -->
     <div class="product-section">
+
+        <!-- GALLERY -->
         <div class="gallery-wrap">
             <div class="gallery-main">
                 <button class="gallery-arrow prev" onclick="navGallery(-1)">‹</button>
-                <img id="main-img" src="kask-pokla-1.jpeg" alt="SENA Helmet Hanger">
+                <img id="main-img" src="stand-1.jpeg" alt="AURORA Motorcycle Stand">
                 <button class="gallery-arrow next" onclick="navGallery(1)">›</button>
             </div>
             <div class="gallery-thumbs">
-                <div class="thumb active" onclick="switchImage(0, this)"><img src="kask-pokla-1.jpeg" alt=""></div>
-                <div class="thumb" onclick="switchImage(1, this)"><img src="kask-pokla-2.jpeg" alt=""></div>
-                <div class="thumb" onclick="switchImage(2, this)"><img src="kask-pokla-3.jpeg" alt=""></div>
+                <div class="thumb active" onclick="switchImage(0, this)">
+                    <img src="stand-1.jpeg" alt="">
+                </div>
+                <div class="thumb" onclick="switchImage(1, this)">
+                    <img src="stand-2.jpeg" alt="">
+                </div>
+                <div class="thumb" onclick="switchImage(2, this)">
+                    <img src="stand-3.jpeg" alt="">
+                </div>
+                <div class="thumb" onclick="switchImage(3, this)">
+                    <img src="stand-4.jpeg" alt="">
+                </div>
             </div>
         </div>
 
+        <!-- PRODUCT INFO -->
         <div class="product-info">
-            <h1 class="product-title">SENA Helmet Hanger</h1>
+            <h1 class="product-title">AURORA Motorcycle Stand</h1>
 
-            <div class="price">99,00 €</div>
-            <div class="price-note">Previous lowest price was 99,00 €.</div>
+            <div class="price">1 290,00 €</div>
+            <div class="price-note">Previous lowest price was 1 290,00 €.</div>
 
             <div class="short-desc">
-                Introducing the innovative ELIPSA SENA helmet rack, which combines modern design with functionality.
-                This minimalistic rack is the perfect solution for any motorcyclist who wants to keep their surroundings
-                organized and aesthetically pleasing.
+                The AURORA motorcycle sidecar is the perfect solution for motorcycle enthusiasts who want to combine
+                aesthetics with practicality. Designed for those who value both elegance and functionality, this sidecar
+                will make a striking addition to your garage or living room.
             </div>
 
             <div class="delivery-note">Delivery in 4 weeks</div>
@@ -661,36 +706,38 @@
                 <button class="btn-cart">Add to cart</button>
             </div>
 
+            <!-- ACCORDIONS -->
             <div class="accordion">
                 <div class="accordion-item">
                     <div class="accordion-header" onclick="toggleAccordion(this)">
-                        <div class="accordion-title"><span class="red-dot"></span>Description</div>
+                        <div class="accordion-title">
+                            <span class="red-dot"></span>
+                            Description
+                        </div>
                         <span class="accordion-arrow">˅</span>
                     </div>
                     <div class="accordion-body">
                         <div class="accordion-body-inner">
-                            <p><strong>Product Features:</strong></p>
+                            <p>The AURORA platform fits perfectly into a variety of interior designs, emphasizing the
+                                unique character of each motorcycle. Heavy-duty steel construction with precision-welded
+                                joints ensures long-term stability and safety.</p>
                             <br>
-                            <p><strong>Solid Construction:</strong> Made of high-quality materials, the shelf ensures
-                                stability and safe helmet storage, and its modern look fits perfectly into various
-                                interior designs.</p>
+                            <p>The AURORA trolley is not only perfect for everyday use, but also ideal for transporting
+                                your dream motorcycle. Thanks to its lockable, industrial-grade casters you can move it
+                                effortlessly across any flat surface.</p>
                             <br>
-                            <p><strong>Practical Hook:</strong> There is a hook under the shelf on which you can hang
-                                your jacket, gloves or other motorcycle accessories.</p>
-                            <br>
-                            <p>The ELIPSA SENA shelf is the perfect solution for motorcyclists looking for a convenient
-                                way to store their helmet and accessories. It will add order and aesthetics to your
-                                surroundings, and create a unique motorcycle atmosphere in any room.</p>
-                            <br>
-                            <p>Add a touch of style and organization to your life with the ELIPSA helmet shelf – a
-                                perfect combination of functionality and design!</p>
+                            <p>Don't wait! Choose the AURORA motorcycle sidecar and enjoy a combination of style and
+                                functionality that will surely impress every guest.</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="accordion-item">
                     <div class="accordion-header" onclick="toggleAccordion(this)">
-                        <div class="accordion-title"><span class="red-dot"></span>Payment & delivery</div>
+                        <div class="accordion-title">
+                            <span class="red-dot"></span>
+                            Payment & delivery
+                        </div>
                         <span class="accordion-arrow">˅</span>
                     </div>
                     <div class="accordion-body">
@@ -703,6 +750,7 @@
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 
@@ -711,46 +759,50 @@
         <div class="related-inner">
             <h3>You may also like</h3>
             <div class="related-grid">
-                <a class="related-card" href="oferta-statera.html">
-                    <img src="stand-1.jpeg" alt="AURORA Motorcycle Stand">
+                <a class="related-card" href="sena-helmet-hanger.html">
+                    <img src="kask-pokla-2.jpeg" alt="SENA Helmet Hanger">
                     <div class="card-body">
-                        <div class="card-name">AURORA Motorcycle Stand</div>
-                        <div class="card-price">1 290,00 €</div>
+                        <div class="card-name">SENA Helmet Hanger</div>
+                        <div class="card-price">99,00 €</div>
                     </div>
                 </a>
-                <a class="related-card" href="oferta-polka.html">
-                    <img src="polka-1.jpeg" alt="Motorcycle Shelf">
-                    <div class="card-body">
-                        <div class="card-name">Motorcycle Shelf (90)</div>
-                        <div class="card-price">79,00 €</div>
-                    </div>
-                </a>
-                <a class="related-card" href="oferta-stand-drugi.html">
+                <a class="related-card" href="aurora-trolley.html">
                     <img src="stand-drugi-1.jpeg" alt="AURORA Trolley">
                     <div class="card-body">
                         <div class="card-name">AURORA Trolley – Pro Edition</div>
                         <div class="card-price">1 490,00 €</div>
                     </div>
                 </a>
+                <a class="related-card" href="motorcycle-shelf.html">
+                    <img src="polka-1.jpeg" alt="Motorcycle Shelf">
+                    <div class="card-body">
+                        <div class="card-name">Motorcycle Shelf (90)</div>
+                        <div class="card-price">79,00 €</div>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
 
+    <!-- FOOTER -->
     <footer class="site-footer">
         <div class="footer-grid">
             <div class="footer-contact">
                 <h4>Need help?</h4>
                 <p>✉ <span class="email">info@elipsa.pro</span></p>
                 <div class="footer-social">
-                    <a href="#" style="background:#333;"><svg width="14" height="14" viewBox="0 0 24 24" fill="#fff">
+                    <a href="#" style="background:#333;">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="#fff">
                             <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
-                        </svg></a>
-                    <a href="#" style="background:#333;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                            stroke="#fff" stroke-width="2">
+                        </svg>
+                    </a>
+                    <a href="#" style="background:#333;">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2">
                             <rect x="2" y="2" width="20" height="20" rx="5" />
                             <circle cx="12" cy="12" r="5" />
                             <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
-                        </svg></a>
+                        </svg>
+                    </a>
                 </div>
             </div>
             <div class="footer-links">
@@ -775,8 +827,9 @@
     </footer>
 
     <script>
-        const images = ['kask-pokla-1.jpeg', 'kask-pokla-2.jpeg', 'kask-pokla-3.jpeg'];
+        const images = ['stand-1.jpeg', 'stand-2.jpeg', 'stand-3.jpeg', 'stand-4.jpeg'];
         let currentIdx = 0;
+
         function switchImage(idx, el) {
             currentIdx = idx;
             document.getElementById('main-img').src = images[idx];
@@ -784,16 +837,20 @@
             if (el) el.classList.add('active');
             else document.querySelectorAll('.thumb')[idx].classList.add('active');
         }
+
         function navGallery(dir) {
             currentIdx = (currentIdx + dir + images.length) % images.length;
             switchImage(currentIdx);
         }
+
         function changeQty(delta) {
             const input = document.getElementById('qty');
             input.value = Math.max(1, parseInt(input.value || 1) + delta);
         }
+
         function toggleAccordion(header) {
-            header.parentElement.classList.toggle('open');
+            const item = header.parentElement;
+            item.classList.toggle('open');
         }
     </script>
 
