@@ -190,11 +190,10 @@
                 <span>//</span>FilmujAuto.pl
             </a>
             <ul class="nav-links">
-                <li><a href="../index.html#proces">Proces</a></li>
                 <li><a href="../index.html#portfolio">Portfolio</a></li>
                 <li><a href="../index.html#oferta">Oferta</a></li>
+                <li><a href="../blog.html" class="text-orange">Blog</a></li>
                 <li><a href="../index.html#o-mnie">O mnie</a></li>
-                <li><a href="index.html" class="text-orange">Blog</a></li>
             </ul>
             <div class="nav-actions">
                 <a href="tel:+48796766068" class="nav-phone">+48 796 766 068</a>
@@ -225,11 +224,20 @@
 
                 <!-- Video at the beginning -->
                 <div class="video-container video-float"
-                    style="margin: 40px 0; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-                    <video controls style="width: 100%; display: block;">
+                    style="margin: 40px 0; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); position: relative;">
+                    <video id="heroVideo" autoplay loop muted playsinline style="width: 100%; display: block;">
                         <source src="../video_launch.mp4" type="video/mp4">
                         Twój zachłanny system nie wspiera tego wideo.
                     </video>
+                    <button id="soundToggle" onclick="toggleSound()"
+                        style="position: absolute; bottom: 15px; right: 15px; background: rgba(0,0,0,0.7); border: none; border-radius: 50%; width: 44px; height: 44px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.2s;"
+                        onmouseover="this.style.background='rgba(255,107,0,0.9)'"
+                        onmouseout="this.style.background='rgba(0,0,0,0.7)'">
+                        <svg id="soundIcon" width="20" height="20" viewBox="0 0 24 24" fill="white">
+                            <path
+                                d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
+                        </svg>
+                    </button>
                 </div>
 
                 <p>BMW M5 E60 (oraz bliźniacze M6 E63) to ostatnie maszyny wyposażone w sekwencyjną skrzynię biegów SMG
@@ -418,14 +426,7 @@
                     dla znajomych, a następnie zapomnij o jej istnieniu. Inaczej twoje V10 bardzo szybko połączy się z
                     nowym sprzęgłem – na twoją rachunek.</p>
 
-                <!-- Video at the end -->
-                <div class="video-container"
-                    style="max-width: 400px; margin: 40px auto; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-                    <video controls style="width: 100%; display: block;">
-                        <source src="../video_launch.mp4" type="video/mp4">
-                        Twój zachłanny system nie wspiera tego wideo.
-                    </video>
-                </div>
+
 
                 <div class="cta-box">
                     <h3>Chcesz zobaczyć jak robimy ujęcia M5?</h3>
@@ -470,7 +471,7 @@
                     <ul style="line-height: 2;">
                         <li><a href="../index.html#portfolio" style="color:var(--gray)">Portfolio</a></li>
                         <li><a href="../index.html#oferta" style="color:var(--gray)">Cennik</a></li>
-                        <li><a href="index.html" style="color:var(--gray)">Blog</a></li>
+                        <li><a href="../blog.html" style="color:var(--gray)">Blog</a></li>
                     </ul>
                 </div>
                 <div>
@@ -493,6 +494,20 @@
             once: true,
             offset: 100
         });
+
+        function toggleSound() {
+            const video = document.getElementById('heroVideo');
+            const icon = document.getElementById('soundIcon');
+            video.muted = !video.muted;
+
+            if (video.muted) {
+                // Muted icon (speaker with X)
+                icon.innerHTML = '<path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/>';
+            } else {
+                // Unmuted icon (speaker with waves)
+                icon.innerHTML = '<path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>';
+            }
+        }
     </script>
 </body>
 
