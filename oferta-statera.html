@@ -1,280 +1,546 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <title>Oferta Produkcji Wideo - Elipsa.pro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURORA Motorcycle Stand – Elipsa Pro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #0f1011;
-            color: #eaeaea;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
+            background: #0f1011;
+            color: #e0e0e0;
+            font-size: 15px;
+            line-height: 1.7;
         }
 
-        .container {
-            max-width: 1000px;
-            margin: 40px auto;
-            background: #151618;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
-            border: 1px solid #2a2b2f;
-        }
-
-        .header {
-            position: relative;
-            background: url('https://elipsa.pro/wp-content/uploads/2026/01/BWRO3046-1024x1024.jpg') center/cover no-repeat;
-            padding: 100px 40px;
-            text-align: center;
-            border-bottom: 3px solid #e51d20;
-            /* Akcent czerwieni z Elipsa.pro */
-        }
-
-        .header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(24, 25, 28, 0.92), rgba(10, 10, 11, 0.98));
-            z-index: 1;
-        }
-
-        .header h1,
-        .header p {
-            position: relative;
-            z-index: 2;
-        }
-
-        .header h1 {
-            margin: 0;
-            font-size: 46px;
-            font-weight: 800;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
-        }
-
-        .header p {
-            margin: 15px 0 0;
-            font-size: 18px;
-            color: #bbb;
-        }
-
-        .content {
-            padding: 40px;
-        }
-
-        h2 {
-            border-bottom: 1px solid #333;
-            padding-bottom: 10px;
-            margin-top: 40px;
-            color: #fff;
-            font-weight: 600;
-        }
-
-        .item {
-            background: #1d1e22;
-            padding: 24px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            border-left: 4px solid #333;
-            transition: border-left-color 0.3s;
-        }
-
-        .item:hover {
-            border-left-color: #e51d20;
-        }
-
-        .item-header {
+        /* ── TOP NAV ── */
+        .topbar {
+            background: #0a0a0b;
+            border-bottom: 1px solid #1e1e20;
+            padding: 14px 40px;
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            margin-bottom: 10px;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
-        .item h3 {
-            margin: 0;
-            font-size: 20px;
+        .topbar .logo {
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: 2px;
             color: #fff;
+            text-transform: uppercase;
         }
 
-        .price {
-            font-size: 18px;
-            font-weight: 600;
+        .topbar .logo span {
             color: #e51d20;
         }
 
-        .description {
-            font-size: 14px;
+        .topbar nav a {
+            color: #aaa;
+            text-decoration: none;
+            margin-left: 28px;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            transition: color .2s;
+        }
+
+        .topbar nav a:hover {
+            color: #fff;
+        }
+
+        /* ── BREADCRUMB ── */
+        .breadcrumb {
+            padding: 14px 40px;
+            font-size: 12px;
+            color: #555;
+            border-bottom: 1px solid #1a1a1c;
+        }
+
+        .breadcrumb a {
+            color: #666;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
             color: #aaa;
         }
 
-        .options-box {
-            background: #111;
-            padding: 15px;
-            border-radius: 6px;
-            margin-top: 15px;
-            border: 1px dashed #444;
+        .breadcrumb span {
+            margin: 0 6px;
         }
 
-        .options-box h4 {
-            margin-top: 0;
-            margin-bottom: 8px;
-            color: #ccc;
+        /* ── PRODUCT SECTION ── */
+        .product-wrap {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 40px;
+            display: grid;
+            grid-template-columns: 1fr 430px;
+            gap: 60px;
+            align-items: start;
         }
 
-        .portfolio {
-            text-align: center;
-            margin-top: 50px;
-            padding: 30px;
-            background: rgba(229, 29, 32, 0.05);
-            /* Lekko czerwony bg */
-            border-radius: 8px;
-        }
-
-        .portfolio h3 {
-            margin-top: 0;
-            color: #fff;
-        }
-
-        .portfolio-links a {
-            color: #e51d20;
-            text-decoration: none;
-            display: inline-block;
-            margin: 5px 15px;
-            font-weight: 600;
-        }
-
-        .portfolio-links a:hover {
-            text-decoration: underline;
-        }
-
-        .footer {
-            text-align: center;
-            padding: 20px;
-            font-size: 12px;
-            color: #555;
-            background: #111;
-        }
-
-        ul {
-            padding-left: 20px;
-        }
-
-        .note {
-            font-size: 12px;
-            color: #777;
-            font-style: italic;
-        }
-
-        .video-placeholder {
-            background: #111;
-            border: 1px dashed #444;
-            border-radius: 6px;
-            height: 100px;
+        /* ── GALLERY ── */
+        .gallery {
             display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: 25px;
-            color: #666;
-            font-size: 13px;
+            flex-direction: column;
             gap: 12px;
         }
 
-        .video-placeholder svg {
-            width: 20px;
-            height: 20px;
-            stroke: #666;
-        }
-
-        .iframe-container {
-            position: relative;
-            padding-bottom: 56.25%;
-            /* 16:9 proportion */
-            height: 0;
+        .gallery-main {
+            width: 100%;
+            aspect-ratio: 4/3;
             overflow: hidden;
-            border-radius: 8px;
-            margin-top: 25px;
-            background: #000;
+            border-radius: 10px;
+            background: #111;
+            cursor: zoom-in;
         }
 
-        .iframe-container iframe,
-        .iframe-container video {
-            position: absolute;
-            top: 0;
-            left: 0;
+        .gallery-main img {
             width: 100%;
             height: 100%;
-            border: 0;
-        }
-
-        .vertical-video-container {
-            width: 100%;
-            border-radius: 12px;
-            overflow: hidden;
-            background: #000;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-            margin-top: 25px;
-        }
-
-        .vertical-video-container video {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .mockup-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin-top: 25px;
-        }
-
-        .mockup-grid img {
-            width: 100%;
-            height: 200px;
-            /* Fixed height for consistent grid */
-            border-radius: 8px;
             object-fit: cover;
-            border: 1px solid #333;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+            transition: transform .4s ease;
         }
 
-        .portfolio-feature {
+        .gallery-main:hover img {
+            transform: scale(1.04);
+        }
+
+        .gallery-thumbs {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        .gallery-thumbs .thumb {
+            aspect-ratio: 1;
+            border-radius: 6px;
+            overflow: hidden;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: border-color .2s;
+        }
+
+        .gallery-thumbs .thumb:hover,
+        .gallery-thumbs .thumb.active {
+            border-color: #e51d20;
+        }
+
+        .gallery-thumbs .thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* ── PRODUCT INFO ── */
+        .product-info {
+            position: sticky;
+            top: 80px;
+        }
+
+        .product-brand {
+            font-size: 11px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #e51d20;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .product-title {
+            font-size: 34px;
+            font-weight: 700;
+            color: #fff;
+            line-height: 1.2;
+            margin-bottom: 18px;
+        }
+
+        .rating-row {
             display: flex;
             align-items: center;
-            gap: 40px;
-            margin-top: 40px;
-            text-align: left;
+            gap: 10px;
+            margin-bottom: 24px;
         }
 
-        .portfolio-feature .video-wrapper {
-            flex: 0 0 35%;
+        .stars {
+            color: #f0a800;
+            letter-spacing: 2px;
+            font-size: 14px;
         }
 
-        .portfolio-feature .text-wrapper {
-            flex: 1;
-            font-size: 16px;
-            color: #ddd;
+        .rating-count {
+            font-size: 13px;
+            color: #666;
+        }
+
+        .price-block {
+            margin-bottom: 28px;
+        }
+
+        .price-main {
+            font-size: 36px;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .price-main .currency {
+            font-size: 22px;
+            margin-left: 4px;
+            color: #aaa;
+        }
+
+        .price-note {
+            font-size: 12px;
+            color: #555;
+            margin-top: 4px;
+        }
+
+        .short-desc {
+            font-size: 14px;
+            color: #999;
+            margin-bottom: 28px;
+            padding-bottom: 28px;
+            border-bottom: 1px solid #1e1e20;
             line-height: 1.8;
         }
 
-        @media (max-width: 768px) {
-            .portfolio-feature {
-                flex-direction: column;
+        .delivery-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            color: #5ac078;
+            font-weight: 500;
+            margin-bottom: 24px;
+        }
+
+        .delivery-badge::before {
+            content: '✓';
+            width: 20px;
+            height: 20px;
+            background: rgba(90, 192, 120, 0.15);
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            font-size: 11px;
+        }
+
+        .qty-add {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .qty-input {
+            display: flex;
+            align-items: center;
+            border: 1px solid #333;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #151618;
+        }
+
+        .qty-input button {
+            width: 40px;
+            height: 52px;
+            background: none;
+            border: none;
+            color: #aaa;
+            font-size: 20px;
+            cursor: pointer;
+            transition: color .2s, background .2s;
+        }
+
+        .qty-input button:hover {
+            background: #1e1e22;
+            color: #fff;
+        }
+
+        .qty-input input {
+            width: 52px;
+            text-align: center;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 16px;
+            font-family: inherit;
+        }
+
+        .btn-cart {
+            flex: 1;
+            background: #e51d20;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            transition: background .2s, transform .1s;
+        }
+
+        .btn-cart:hover {
+            background: #c81a1d;
+            transform: translateY(-1px);
+        }
+
+        .btn-wishlist {
+            width: 52px;
+            height: 52px;
+            border: 1px solid #333;
+            background: #151618;
+            border-radius: 8px;
+            color: #777;
+            font-size: 18px;
+            cursor: pointer;
+            transition: color .2s, border-color .2s;
+        }
+
+        .btn-wishlist:hover {
+            color: #e51d20;
+            border-color: #e51d20;
+        }
+
+        .meta-row {
+            margin-top: 24px;
+            padding-top: 20px;
+            border-top: 1px solid #1e1e20;
+            font-size: 12px;
+            color: #555;
+        }
+
+        .meta-row a {
+            color: #666;
+            text-decoration: none;
+        }
+
+        /* ── TABS ── */
+        .tabs-section {
+            max-width: 1100px;
+            margin: 60px auto;
+            padding: 0 40px;
+        }
+
+        .tab-nav {
+            display: flex;
+            border-bottom: 1px solid #222;
+            margin-bottom: 36px;
+        }
+
+        .tab-nav button {
+            background: none;
+            border: none;
+            color: #666;
+            font-size: 14px;
+            font-weight: 500;
+            font-family: inherit;
+            padding: 14px 24px;
+            cursor: pointer;
+            position: relative;
+            transition: color .2s;
+        }
+
+        .tab-nav button::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: #e51d20;
+            transform: scaleX(0);
+            transition: transform .2s;
+        }
+
+        .tab-nav button.active {
+            color: #fff;
+        }
+
+        .tab-nav button.active::after {
+            transform: scaleX(1);
+        }
+
+        .tab-nav button:hover {
+            color: #ccc;
+        }
+
+        .tab-panel {
+            display: none;
+        }
+
+        .tab-panel.active {
+            display: block;
+        }
+
+        /* Description */
+        .tab-panel h2 {
+            font-size: 22px;
+            color: #fff;
+            margin-bottom: 16px;
+        }
+
+        .tab-panel p {
+            color: #999;
+            margin-bottom: 14px;
+            font-size: 14px;
+        }
+
+        .tab-panel ul {
+            list-style: none;
+            margin-bottom: 14px;
+        }
+
+        .tab-panel ul li {
+            padding: 7px 0;
+            padding-left: 22px;
+            position: relative;
+            color: #999;
+            font-size: 14px;
+            border-bottom: 1px solid #1a1a1c;
+        }
+
+        .tab-panel ul li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #e51d20;
+            font-size: 12px;
+        }
+
+        /* Specs table */
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .specs-table tr:nth-child(even) {
+            background: #151618;
+        }
+
+        .specs-table td {
+            padding: 12px 16px;
+            font-size: 14px;
+            border-bottom: 1px solid #1e1e20;
+        }
+
+        .specs-table td:first-child {
+            color: #666;
+            font-weight: 500;
+            width: 220px;
+        }
+
+        .specs-table td:last-child {
+            color: #ddd;
+        }
+
+        /* ── RELATED PRODUCTS ── */
+        .related-section {
+            max-width: 1100px;
+            margin: 40px auto 80px;
+            padding: 0 40px;
+        }
+
+        .related-section h3 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 24px;
+            padding-bottom: 14px;
+            border-bottom: 1px solid #1e1e20;
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .related-card {
+            background: #151618;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #1e1e20;
+            transition: border-color .2s, transform .2s;
+        }
+
+        .related-card:hover {
+            border-color: #e51d20;
+            transform: translateY(-3px);
+        }
+
+        .related-card img {
+            width: 100%;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+            display: block;
+        }
+
+        .related-card .card-body {
+            padding: 16px;
+        }
+
+        .related-card .card-name {
+            font-size: 14px;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 6px;
+        }
+
+        .related-card .card-price {
+            font-size: 15px;
+            font-weight: 700;
+            color: #e51d20;
+        }
+
+        /* ── FOOTER ── */
+        footer {
+            background: #0a0a0b;
+            border-top: 1px solid #1a1a1c;
+            padding: 40px;
+            text-align: center;
+            font-size: 12px;
+            color: #444;
+        }
+
+        footer a {
+            color: #555;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 900px) {
+            .product-wrap {
+                grid-template-columns: 1fr;
+                gap: 32px;
             }
 
-            .portfolio-feature .video-wrapper {
-                width: 100%;
-                max-width: 350px;
-                margin: 0 auto;
+            .product-info {
+                position: static;
+            }
+
+            .related-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .topbar nav {
+                display: none;
             }
         }
     </style>
@@ -282,101 +548,228 @@
 
 <body>
 
-    <div class="container">
-        <div class="header">
-            <h1>Oferta Produkcji Wideo</h1>
-            <p>Projekt: Elipsa.pro – Akcesoria Motocyklowe</p>
-        </div>
+    <!-- NAV -->
+    <header class="topbar">
+        <div class="logo">Elipsa<span>.</span>pro</div>
+        <nav>
+            <a href="#">Shop</a>
+            <a href="#">About</a>
+            <a href="#">Blog</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
 
-        <div class="content">
-            <p>Propozycja realizacji nagrań premium, utrzymanych w kinowym, mrocznym klimacie, podkreślającym charakter
-                marki Elipsa i stojaka Statera.</p>
+    <!-- BREADCRUMB -->
+    <div class="breadcrumb">
+        <a href="#">Home</a><span>›</span>
+        <a href="#">Products</a><span>›</span>
+        AURORA Motorcycle Stand
+    </div>
 
-            <h2>Formaty realizacji wideo (Header i Filmy Produktowe)</h2>
-            <div class="item">
-                <div class="item-header">
-                    <h3>Opcja 1: Pojedyncze ujęcia produktów i headera</h3>
-                    <span class="price">[Cena PLN netto]</span>
+    <!-- PRODUCT SECTION -->
+    <div class="product-wrap">
+
+        <!-- GALLERY -->
+        <div class="gallery">
+            <div class="gallery-main" id="main-img-wrap">
+                <img id="main-img" src="stand-1.jpeg" alt="AURORA Motorcycle Stand">
+            </div>
+            <div class="gallery-thumbs">
+                <div class="thumb active" onclick="switchImage('stand-1.jpeg', this)">
+                    <img src="stand-1.jpeg" alt="">
                 </div>
-                <div class="description">
-                    Płynne, nieprzerwane pojedyncze formy ujęć zastępujące zdjęcia dla stojaka Statera (i innych
-                    produktów) oraz pojedyncze,
-                    klimatyczne ujęcie do headera strony.
-                    <ul>
-                        <li>1 dzień zdjęciowy (krótszy format)</li>
-                        <li>Wydanie materiałów bez skomplikowanego, zaawansowanego montażu</li>
-                        <li>Sound Design + muzyka stockowa oraz Color Grading w mrocznym klimacie</li>
-                    </ul>
-                    <div class="mockup-grid">
-                        <img src="https://elipsa.pro/wp-content/uploads/2026/01/BWRO3144-1x1-1-1024x1024.jpg"
-                            alt="Statera Stand">
-                        <img src="https://elipsa.pro/wp-content/uploads/2026/01/BWRO3112-1024x1024.jpg"
-                            alt="Statera Stand Details">
-                        <img src="https://elipsa.pro/wp-content/uploads/2026/01/BWRO3077-1024x1024.jpg"
-                            alt="Statera Stand usage">
-                    </div>
+                <div class="thumb" onclick="switchImage('stand-2.jpeg', this)">
+                    <img src="stand-2.jpeg" alt="">
+                </div>
+                <div class="thumb" onclick="switchImage('stand-3.jpeg', this)">
+                    <img src="stand-3.jpeg" alt="">
+                </div>
+                <div class="thumb" onclick="switchImage('stand-4.jpeg', this)">
+                    <img src="stand-4.jpeg" alt="">
                 </div>
             </div>
-
-            <div class="item">
-                <div class="item-header">
-                    <h3>Opcja 2: Spoty, zmontowane z kilku ujęć</h3>
-                    <span class="price">[Cena PLN netto]</span>
-                </div>
-                <div class="description">
-                    Kompleksowa, zaawansowana realizacja. Dla stojaka Statera oraz głównego Headera tworzymy
-                    dynamiczne, krótkie spoty zmontowane z wielu perspektyw (szerokie kadry, detale, zróżnicowany ruch).
-                    <ul>
-                        <li>Większa liczba ujęć i bardziej skomplikowany plan zdjęciowy, montaż i nadanie wysokiej
-                            dynamiki dla każdego filmu z osobna.</li>
-                        <li>Rozbudowany Sound Design potęgujący immersję</li>
-                    </ul>
-
-                    <p style="margin-top:20px; font-weight: 600; color: #fff;">Przykładowa realizacja (wzór
-                        Dynamoto.eu):</p>
-                    <div class="iframe-container">
-                        <!-- Miejsce na wideo z dynamoto lub placeholderowy film do podmienienia -->
-                        <video autoplay loop muted playsinline
-                            src="https://dynamoto.eu/cdn/shop/files/DYNAMOTO_41c09ebc-7ee4-469b-980b-4b20a7fcc377.mp4?v=1716353987"></video>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Sekcja z oddzielnymi produktami zostala zintegrowana w pakietach A/B -->
-
-            <div class="portfolio">
-                <h3>Moje Portfolio – Nagrania Motoryzacyjne</h3>
-                <div class="portfolio-feature">
-                    <div class="video-wrapper">
-                        <div class="vertical-video-container" style="margin-top:0;">
-                            <!-- Vertical video src: M3 F80 -->
-                            <video controls autoplay loop muted playsinline src="m3-f80 copy.mov"></video>
-                        </div>
-                    </div>
-                    <div class="text-wrapper">
-                        <p style="margin-top:0;"><b>Przykład M3 F80</b></p>
-                        <p>Realizacja w mrocznym, kinowym klimacie motoryzacyjnym. Mocne zabawy światłem, wydobycie
-                            krawędzi oraz zastosowanie dynamicznego ruchu kamery oddającego surowy charakter całości.
-                            Estetyka ujęcia i montaż mocno celująca w profil marki Elipsa.</p>
-                        <p class="note">Podmień w kodzie adres SRC iframa powyżej na autentyczny link do Twojego wideo w
-                            YouTube / Vimeo.</p>
-                    </div>
-                </div>
-            </div>
-
         </div>
 
-        <div style="text-align: center; margin: 60px 0 30px;">
-            <a href="mailto:kontakt@filmujauto.pl"
-                style="display: inline-block; padding: 18px 40px; background: #e51d20; color: #fff; font-size: 18px; font-weight: 700; text-decoration: none; border-radius: 8px; text-transform: uppercase; letter-spacing: 1px; transition: background 0.3s; box-shadow: 0 4px 15px rgba(229, 29, 32, 0.4);">Skontaktuj
-                się z nami</a>
-        </div>
+        <!-- PRODUCT INFO -->
+        <div class="product-info">
+            <div class="product-brand">Elipsa Lifestyle</div>
+            <h1 class="product-title">AURORA<br>Motorcycle Stand</h1>
 
-        <div class="footer">
-            Ważność oferty: 30 dni. Kwoty netto. <br>
-            W razie pytań zapraszam do kontaktu.
+            <div class="rating-row">
+                <div class="stars">★★★★★</div>
+                <div class="rating-count">4.9 / 5 &nbsp;(24 reviews)</div>
+            </div>
+
+            <div class="price-block">
+                <div class="price-main">1 290,00 <span class="currency">€</span></div>
+                <div class="price-note">Incl. VAT · Free EU shipping on orders over 500€</div>
+            </div>
+
+            <div class="short-desc">
+                The AURORA motorcycle stand is the perfect solution for motorcycle enthusiasts who want to combine
+                aesthetics with practicality. Designed for those who value both elegance and functionality, this stand
+                will make a striking addition to your garage or living room.
+            </div>
+
+            <div class="delivery-badge">Delivery within 4 weeks</div>
+
+            <div class="qty-add">
+                <div class="qty-input">
+                    <button onclick="changeQty(-1)">−</button>
+                    <input type="number" id="qty" value="1" min="1">
+                    <button onclick="changeQty(1)">+</button>
+                </div>
+                <button class="btn-cart">Add to cart</button>
+                <button class="btn-wishlist">♡</button>
+            </div>
+
+            <div class="meta-row">
+                <strong>SKU:</strong> AURORA-001 &nbsp;·&nbsp;
+                <strong>Category:</strong> <a href="#">Motorcycle Stands</a>
+            </div>
         </div>
     </div>
+
+    <!-- TABS -->
+    <div class="tabs-section">
+        <div class="tab-nav">
+            <button class="active" onclick="switchTab('description', this)">Description</button>
+            <button onclick="switchTab('specs', this)">Specifications</button>
+            <button onclick="switchTab('shipping', this)">Shipping & Returns</button>
+        </div>
+
+        <div class="tab-panel active" id="tab-description">
+            <h2>About the AURORA Stand</h2>
+            <p>The AURORA platform fits perfectly into a variety of interior designs, emphasizing the unique character
+                of each motorcycle. Heavy-duty steel construction with precision-welded joints ensures long-term
+                stability and safety.</p>
+            <p>The AURORA trolley is not only perfect for everyday use, but also ideal for transporting your dream
+                motorcycle. Thanks to its lockable, industrial-grade casters you can move it effortlessly across any
+                flat surface.</p>
+            <ul>
+                <li>Powder-coated matte black finish – resistant to scratches and corrosion</li>
+                <li>Adjustable rear wheel cradle – fits most motorcycle widths</li>
+                <li>4× industrial locking castors with 360° rotation</li>
+                <li>Maximum load capacity: 400 kg</li>
+                <li>Suitable for: sport bikes, naked bikes, tourers</li>
+                <li>Branded Elipsa logo laser-engraved on the platform</li>
+            </ul>
+            <p>Don't wait! Choose the AURORA motorcycle stand and enjoy a combination of style and functionality that
+                will surely impress every guest.</p>
+        </div>
+
+        <div class="tab-panel" id="tab-specs">
+            <table class="specs-table">
+                <tr>
+                    <td>Material</td>
+                    <td>Powder-coated steel</td>
+                </tr>
+                <tr>
+                    <td>Finish</td>
+                    <td>Matte black</td>
+                </tr>
+                <tr>
+                    <td>Platform dimensions</td>
+                    <td>185 × 40 cm</td>
+                </tr>
+                <tr>
+                    <td>Max load capacity</td>
+                    <td>400 kg</td>
+                </tr>
+                <tr>
+                    <td>Wheel type</td>
+                    <td>Locking castors, 360°</td>
+                </tr>
+                <tr>
+                    <td>Fits tire width</td>
+                    <td>120 – 240 mm</td>
+                </tr>
+                <tr>
+                    <td>Product weight</td>
+                    <td>18 kg</td>
+                </tr>
+                <tr>
+                    <td>Suitable for</td>
+                    <td>Sport, Naked, Tourer</td>
+                </tr>
+                <tr>
+                    <td>SKU</td>
+                    <td>AURORA-001</td>
+                </tr>
+                <tr>
+                    <td>Country of manufacture</td>
+                    <td>Poland</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="tab-panel" id="tab-shipping">
+            <h2>Shipping & Returns</h2>
+            <ul>
+                <li>Lead time: approx. 4 weeks (handmade to order)</li>
+                <li>Free shipping within the EU on orders over 500€</li>
+                <li>Delivered flat-packed with full assembly instructions</li>
+                <li>14-day return window for unused items in original packaging</li>
+                <li>Questions? Contact us at info@elipsa.pro</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- RELATED -->
+    <div class="related-section">
+        <h3>You may also like</h3>
+        <div class="related-grid">
+            <div class="related-card">
+                <img src="stand-2.jpeg" alt="Motorcycle Stand">
+                <div class="card-body">
+                    <div class="card-name">AURORA Trolley – Pro Edition</div>
+                    <div class="card-price">1 490,00 €</div>
+                </div>
+            </div>
+            <div class="related-card">
+                <img src="stand-3.jpeg" alt="Stand Detail">
+                <div class="card-body">
+                    <div class="card-name">ELIPSA Rear Paddock Stand</div>
+                    <div class="card-price">490,00 €</div>
+                </div>
+            </div>
+            <div class="related-card">
+                <img src="stand-4.jpeg" alt="Stand angle">
+                <div class="card-body">
+                    <div class="card-name">ELIPSA Garage Mat XL</div>
+                    <div class="card-price">249,00 €</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>PIOTR SZERSZEŃ · ELIPSA SP. Z O.O. · NIP PL8181740169 · BRONISZÓW 116, 39-106 BRONISZÓW, POLAND</p>
+        <p style="margin-top:10px;"><a href="#">Privacy Policy</a><a href="#">Terms</a><a href="#">Contact</a></p>
+        <p style="margin-top:14px;color:#333;">© 2026 Elipsa Pro · All rights reserved</p>
+    </footer>
+
+    <script>
+        function switchImage(src, el) {
+            document.getElementById('main-img').src = src;
+            document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
+            el.classList.add('active');
+        }
+
+        function changeQty(delta) {
+            const input = document.getElementById('qty');
+            const val = Math.max(1, parseInt(input.value || 1) + delta);
+            input.value = val;
+        }
+
+        function switchTab(name, btn) {
+            document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+            document.querySelectorAll('.tab-nav button').forEach(b => b.classList.remove('active'));
+            document.getElementById('tab-' + name).classList.add('active');
+            btn.classList.add('active');
+        }
+    </script>
 
 </body>
 
