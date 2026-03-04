@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AURORA Motorcycle Stand – Elipsa Pro</title>
+    <title>Motorcycle Shelf (90) – Elipsa Pro</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -13,7 +13,7 @@
         *::after {
             box-sizing: border-box;
             margin: 0;
-            padding: 0;
+            padding: 0
         }
 
         body {
@@ -21,10 +21,10 @@
             background: #fff;
             color: #333;
             font-size: 15px;
-            line-height: 1.6;
+            line-height: 1.6
         }
 
-        /* ── RED TOP BAR ── */
+        /* RED TOP BAR */
         .announcement-bar {
             background: #e51d20;
             color: #fff;
@@ -33,24 +33,24 @@
             justify-content: space-between;
             align-items: center;
             font-size: 13px;
-            font-weight: 500;
+            font-weight: 500
         }
 
         .announcement-bar a {
             color: #fff;
             text-decoration: none;
             font-weight: 700;
-            letter-spacing: 0.5px;
+            letter-spacing: .5px
         }
 
-        /* ── HEADER / NAV ── */
+        /* HEADER */
         .site-header {
             background: #fff;
             padding: 16px 40px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px solid #eee
         }
 
         .site-logo {
@@ -59,17 +59,17 @@
             font-style: italic;
             color: #111;
             text-decoration: none;
-            letter-spacing: -0.5px;
+            letter-spacing: -.5px
         }
 
         .site-logo .dot {
-            color: #e51d20;
+            color: #e51d20
         }
 
         .main-nav {
             display: flex;
             align-items: center;
-            gap: 32px;
+            gap: 32px
         }
 
         .main-nav a {
@@ -77,22 +77,22 @@
             text-decoration: none;
             font-size: 15px;
             font-weight: 500;
-            transition: color .2s;
+            transition: color .2s
         }
 
         .main-nav a:hover {
-            color: #e51d20;
+            color: #e51d20
         }
 
         .main-nav .active {
             color: #e51d20;
-            font-weight: 600;
+            font-weight: 600
         }
 
         .header-icons {
             display: flex;
             align-items: center;
-            gap: 20px;
+            gap: 20px
         }
 
         .header-icons a {
@@ -102,36 +102,36 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 2px;
+            gap: 2px
         }
 
         .header-icons svg {
             width: 20px;
-            height: 20px;
+            height: 20px
         }
 
-        /* ── BREADCRUMB ── */
+        /* BREADCRUMB */
         .breadcrumb {
             padding: 16px 40px;
             font-size: 13px;
-            color: #888;
+            color: #888
         }
 
         .breadcrumb a {
             color: #888;
-            text-decoration: none;
+            text-decoration: none
         }
 
         .breadcrumb a:hover {
-            color: #e51d20;
+            color: #e51d20
         }
 
         .breadcrumb .current {
             color: #e51d20;
-            font-weight: 500;
+            font-weight: 500
         }
 
-        /* ── PRODUCT LAYOUT ── */
+        /* PRODUCT LAYOUT */
         .product-section {
             max-width: 1200px;
             margin: 0 auto;
@@ -139,12 +139,12 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 50px;
-            align-items: start;
+            align-items: start
         }
 
-        /* ── GALLERY ── */
+        /* GALLERY */
         .gallery-wrap {
-            position: relative;
+            position: relative
         }
 
         .gallery-main {
@@ -152,13 +152,13 @@
             aspect-ratio: 1;
             overflow: hidden;
             position: relative;
-            background: #f8f8f8;
+            background: #f8f8f8
         }
 
         .gallery-main img {
             width: 100%;
             height: 100%;
-            object-fit: contain;
+            object-fit: contain
         }
 
         .gallery-arrow {
@@ -176,26 +176,26 @@
             font-size: 16px;
             color: #333;
             z-index: 5;
-            transition: border-color .2s, box-shadow .2s;
+            transition: border-color .2s, box-shadow .2s
         }
 
         .gallery-arrow:hover {
             border-color: #e51d20;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, .1)
         }
 
         .gallery-arrow.prev {
-            left: 12px;
+            left: 12px
         }
 
         .gallery-arrow.next {
-            right: 12px;
+            right: 12px
         }
 
         .gallery-thumbs {
             display: flex;
             gap: 10px;
-            margin-top: 16px;
+            margin-top: 16px
         }
 
         .gallery-thumbs .thumb {
@@ -206,49 +206,47 @@
             cursor: pointer;
             border: 2px solid transparent;
             transition: border-color .2s;
-            background: #f8f8f8;
+            background: #f8f8f8
         }
 
         .gallery-thumbs .thumb:hover,
         .gallery-thumbs .thumb.active {
-            border-color: #e51d20;
+            border-color: #e51d20
         }
 
         .gallery-thumbs .thumb img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: cover
         }
 
-        /* ── RIGHT: PRODUCT INFO ── */
-        .product-info {}
-
+        /* PRODUCT INFO */
         .product-title {
             font-size: 28px;
             font-weight: 700;
             color: #111;
             line-height: 1.3;
-            margin-bottom: 16px;
+            margin-bottom: 16px
         }
 
         .price {
             font-size: 22px;
             font-weight: 700;
             color: #e51d20;
-            margin-bottom: 4px;
+            margin-bottom: 4px
         }
 
         .price-note {
             font-size: 12px;
             color: #999;
-            margin-bottom: 20px;
+            margin-bottom: 20px
         }
 
         .short-desc {
             font-size: 14px;
             color: #555;
             line-height: 1.7;
-            margin-bottom: 24px;
+            margin-bottom: 24px
         }
 
         .delivery-note {
@@ -256,15 +254,15 @@
             font-size: 14px;
             font-weight: 500;
             font-style: italic;
-            margin-bottom: 20px;
+            margin-bottom: 20px
         }
 
-        /* ── QTY + ADD TO CART ── */
+        /* QTY + ADD TO CART */
         .add-row {
             display: flex;
             gap: 12px;
             align-items: center;
-            margin-bottom: 30px;
+            margin-bottom: 30px
         }
 
         .qty-box {
@@ -272,7 +270,7 @@
             align-items: center;
             border: 1px solid #ddd;
             border-radius: 4px;
-            overflow: hidden;
+            overflow: hidden
         }
 
         .qty-box button {
@@ -283,11 +281,11 @@
             font-size: 18px;
             color: #555;
             cursor: pointer;
-            transition: background .15s;
+            transition: background .15s
         }
 
         .qty-box button:hover {
-            background: #f0f0f0;
+            background: #f0f0f0
         }
 
         .qty-box input {
@@ -299,7 +297,7 @@
             height: 44px;
             font-size: 15px;
             font-family: inherit;
-            color: #333;
+            color: #333
         }
 
         .btn-cart {
@@ -312,23 +310,23 @@
             font-size: 15px;
             font-weight: 600;
             cursor: pointer;
-            transition: background .2s;
+            transition: background .2s
         }
 
         .btn-cart:hover {
-            background: #c81a1d;
+            background: #c81a1d
         }
 
-        /* ── ACCORDION ── */
+        /* ACCORDION */
         .accordion {
-            margin-top: 10px;
+            margin-top: 10px
         }
 
         .accordion-item {
             border: 1px solid #eee;
             border-radius: 6px;
             margin-bottom: 10px;
-            overflow: hidden;
+            overflow: hidden
         }
 
         .accordion-header {
@@ -338,11 +336,11 @@
             padding: 16px 20px;
             cursor: pointer;
             background: #fff;
-            transition: background .15s;
+            transition: background .15s
         }
 
         .accordion-header:hover {
-            background: #fafafa;
+            background: #fafafa
         }
 
         .accordion-title {
@@ -351,44 +349,44 @@
             gap: 10px;
             font-size: 15px;
             font-weight: 600;
-            color: #111;
+            color: #111
         }
 
         .accordion-title .red-dot {
             width: 8px;
             height: 8px;
             background: #e51d20;
-            border-radius: 2px;
+            border-radius: 2px
         }
 
         .accordion-arrow {
             font-size: 18px;
             color: #999;
-            transition: transform .3s;
+            transition: transform .3s
         }
 
         .accordion-body {
             max-height: 0;
             overflow: hidden;
-            transition: max-height .35s ease;
+            transition: max-height .35s ease
         }
 
         .accordion-body-inner {
             padding: 0 20px 20px;
             font-size: 14px;
             color: #555;
-            line-height: 1.7;
+            line-height: 1.7
         }
 
         .accordion-item.open .accordion-body {
-            max-height: 600px;
+            max-height: 600px
         }
 
         .accordion-item.open .accordion-arrow {
-            transform: rotate(180deg);
+            transform: rotate(180deg)
         }
 
-        /* ── SOCIAL SIDEBAR ── */
+        /* SOCIAL SIDEBAR */
         .social-sidebar {
             position: fixed;
             left: 0;
@@ -397,7 +395,7 @@
             display: flex;
             flex-direction: column;
             gap: 0;
-            z-index: 50;
+            z-index: 50
         }
 
         .social-sidebar a {
@@ -407,25 +405,86 @@
             place-items: center;
             color: #fff;
             font-size: 16px;
-            text-decoration: none;
+            text-decoration: none
         }
 
         .social-sidebar .ig {
             background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-            border-radius: 0 6px 0 0;
+            border-radius: 0 6px 0 0
         }
 
         .social-sidebar .tk {
             background: #010101;
-            border-radius: 0 0 6px 0;
+            border-radius: 0 0 6px 0
         }
 
-        /* ── FOOTER ── */
+        /* RELATED PRODUCTS */
+        .related-section {
+            background: #111;
+            padding: 50px 40px;
+            margin-top: 60px
+        }
+
+        .related-inner {
+            max-width: 1200px;
+            margin: 0 auto
+        }
+
+        .related-section h3 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 28px
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px
+        }
+
+        .related-card {
+            background: #1a1a1c;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform .2s;
+            cursor: pointer;
+            text-decoration: none
+        }
+
+        .related-card:hover {
+            transform: translateY(-4px)
+        }
+
+        .related-card img {
+            width: 100%;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+            display: block
+        }
+
+        .related-card .card-body {
+            padding: 16px 18px
+        }
+
+        .related-card .card-name {
+            font-size: 14px;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 6px
+        }
+
+        .related-card .card-price {
+            font-size: 15px;
+            font-weight: 700;
+            color: #e51d20
+        }
+
+        /* FOOTER */
         .site-footer {
             background: #111;
             color: #ccc;
-            padding: 50px 40px 30px;
-            margin-top: 60px;
+            padding: 50px 40px 30px
         }
 
         .footer-grid {
@@ -433,7 +492,7 @@
             margin: 0 auto;
             display: grid;
             grid-template-columns: 1.2fr 1fr 1fr;
-            gap: 40px;
+            gap: 40px
         }
 
         .footer-grid h4 {
@@ -442,19 +501,19 @@
             font-weight: 700;
             margin-bottom: 16px;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 1px
         }
 
         .footer-contact p {
             font-size: 14px;
-            margin-bottom: 6px;
+            margin-bottom: 6px
         }
 
         .footer-contact .email {
             font-size: 18px;
             font-weight: 600;
             color: #fff;
-            margin-top: 6px;
+            margin-top: 6px
         }
 
         .footer-links a {
@@ -463,17 +522,17 @@
             text-decoration: none;
             font-size: 13px;
             padding: 3px 0;
-            transition: color .2s;
+            transition: color .2s
         }
 
         .footer-links a:hover {
-            color: #fff;
+            color: #fff
         }
 
         .footer-social {
             display: flex;
             gap: 12px;
-            margin-top: 12px;
+            margin-top: 12px
         }
 
         .footer-social a {
@@ -484,7 +543,7 @@
             border-radius: 4px;
             color: #fff;
             font-size: 14px;
-            text-decoration: none;
+            text-decoration: none
         }
 
         .footer-bottom {
@@ -494,95 +553,34 @@
             border-top: 1px solid #222;
             text-align: center;
             font-size: 11px;
-            color: #555;
+            color: #555
         }
 
-        /* ── RELATED PRODUCTS ── */
-        .related-section {
-            background: #111;
-            padding: 50px 40px;
-            margin-top: 60px;
-        }
-
-        .related-inner {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .related-section h3 {
-            font-size: 20px;
-            font-weight: 700;
-            color: #fff;
-            margin-bottom: 28px;
-        }
-
-        .related-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .related-card {
-            background: #1a1a1c;
-            border-radius: 10px;
-            overflow: hidden;
-            transition: transform .2s;
-            cursor: pointer;
-        }
-
-        .related-card:hover {
-            transform: translateY(-4px);
-        }
-
-        .related-card img {
-            width: 100%;
-            aspect-ratio: 4/3;
-            object-fit: cover;
-            display: block;
-        }
-
-        .related-card .card-body {
-            padding: 16px 18px;
-        }
-
-        .related-card .card-name {
-            font-size: 14px;
-            font-weight: 600;
-            color: #fff;
-            margin-bottom: 6px;
-        }
-
-        .related-card .card-price {
-            font-size: 15px;
-            font-weight: 700;
-            color: #e51d20;
-        }
-
-        /* ── RESPONSIVE ── */
-        @media (max-width: 900px) {
+        /* RESPONSIVE */
+        @media(max-width:900px) {
             .product-section {
                 grid-template-columns: 1fr;
-                gap: 30px;
+                gap: 30px
             }
 
             .footer-grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr
             }
 
             .main-nav {
-                display: none;
+                display: none
             }
 
             .site-header {
-                padding: 12px 20px;
+                padding: 12px 20px
             }
 
             .product-section {
-                padding: 10px 20px 40px;
+                padding: 10px 20px 40px
             }
 
             .related-grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr
             }
         }
     </style>
@@ -634,7 +632,7 @@
 
     <!-- BREADCRUMB -->
     <div class="breadcrumb">
-        <a href="#">Home</a> / <a href="#">Products</a> / <span class="current">AURORA Motorcycle Stand</span>
+        <a href="#">Home</a> / <a href="#">Products</a> / <span class="current">Motorcycle Shelf (90)</span>
     </div>
 
     <!-- SOCIAL SIDEBAR -->
@@ -661,36 +659,35 @@
         <div class="gallery-wrap">
             <div class="gallery-main">
                 <button class="gallery-arrow prev" onclick="navGallery(-1)">‹</button>
-                <img id="main-img" src="stand-1.jpeg" alt="AURORA Motorcycle Stand">
+                <img id="main-img" src="polka-1.jpeg" alt="Motorcycle Shelf (90)">
                 <button class="gallery-arrow next" onclick="navGallery(1)">›</button>
             </div>
             <div class="gallery-thumbs">
                 <div class="thumb active" onclick="switchImage(0, this)">
-                    <img src="stand-1.jpeg" alt="">
+                    <img src="polka-1.jpeg" alt="">
                 </div>
                 <div class="thumb" onclick="switchImage(1, this)">
-                    <img src="stand-2.jpeg" alt="">
+                    <img src="polka-2.jpeg" alt="">
                 </div>
                 <div class="thumb" onclick="switchImage(2, this)">
-                    <img src="stand-3.jpeg" alt="">
+                    <img src="polka-3.jpeg" alt="">
                 </div>
                 <div class="thumb" onclick="switchImage(3, this)">
-                    <img src="stand-4.jpeg" alt="">
+                    <img src="polka-4.jpeg" alt="">
                 </div>
             </div>
         </div>
 
         <!-- PRODUCT INFO -->
         <div class="product-info">
-            <h1 class="product-title">AURORA Motorcycle Stand</h1>
+            <h1 class="product-title">Motorcycle Shelf (90)</h1>
 
-            <div class="price">1 290,00 €</div>
-            <div class="price-note">Previous lowest price was 1 290,00 €.</div>
+            <div class="price">79,00 €</div>
+            <div class="price-note">Previous lowest price was 79,00 €.</div>
 
             <div class="short-desc">
-                The AURORA motorcycle sidecar is the perfect solution for motorcycle enthusiasts who want to combine
-                aesthetics with practicality. Designed for those who value both elegance and functionality, this sidecar
-                will make a striking addition to your garage or living room.
+                Add a touch of motorcycle style to your home with the ELIPSA shelf – the perfect combination of
+                aesthetics and functionality!
             </div>
 
             <div class="delivery-note">Delivery in 4 weeks</div>
@@ -716,16 +713,13 @@
                     </div>
                     <div class="accordion-body">
                         <div class="accordion-body-inner">
-                            <p>The AURORA platform fits perfectly into a variety of interior designs, emphasizing the
-                                unique character of each motorcycle. Heavy-duty steel construction with precision-welded
-                                joints ensures long-term stability and safety.</p>
+                            <p>Bring modern style to your interior with the ELIPSA motorcycle shelf, which combines
+                                functionality with elegance. This minimalist shelf is perfect for displaying your
+                                motorcycle accessories, helmets, or decorative items.</p>
                             <br>
-                            <p>The AURORA trolley is not only perfect for everyday use, but also ideal for transporting
-                                your dream motorcycle. Thanks to its lockable, industrial-grade casters you can move it
-                                effortlessly across any flat surface.</p>
-                            <br>
-                            <p>Don't wait! Choose the AURORA motorcycle sidecar and enjoy a combination of style and
-                                functionality that will surely impress every guest.</p>
+                            <p>The ELIPSA shelf is the perfect solution for motorcycle enthusiasts who want to stylishly
+                                store their accessories. It's also a great way to showcase your passion for motorcycles
+                                in your living space.</p>
                         </div>
                     </div>
                 </div>
@@ -757,25 +751,25 @@
         <div class="related-inner">
             <h3>You may also like</h3>
             <div class="related-grid">
-                <a class="related-card" href="oferta-kask.html">
-                    <img src="kask-pokla-2.jpeg" alt="SENA Helmet Hanger">
+                <a class="related-card" href="oferta-statera.html">
+                    <img src="stand-1.jpeg" alt="AURORA Motorcycle Stand">
                     <div class="card-body">
-                        <div class="card-name">SENA Helmet Hanger</div>
-                        <div class="card-price">99,00 €</div>
+                        <div class="card-name">AURORA Motorcycle Stand</div>
+                        <div class="card-price">1 290,00 €</div>
                     </div>
                 </a>
-                <a class="related-card" href="oferta-stand-drugi.html">
+                <a class="related-card" href="oferta-statera.html">
                     <img src="stand-drugi-1.jpeg" alt="AURORA Trolley">
                     <div class="card-body">
                         <div class="card-name">AURORA Trolley – Pro Edition</div>
                         <div class="card-price">1 490,00 €</div>
                     </div>
                 </a>
-                <a class="related-card" href="oferta-polka.html">
-                    <img src="polka-1.jpeg" alt="Motorcycle Shelf">
+                <a class="related-card" href="oferta-statera.html">
+                    <img src="kask-pokla-2.jpeg" alt="Helmet Shelf">
                     <div class="card-body">
-                        <div class="card-name">Motorcycle Shelf (90)</div>
-                        <div class="card-price">79,00 €</div>
+                        <div class="card-name">ELIPSA Helmet Shelf</div>
+                        <div class="card-price">490,00 €</div>
                     </div>
                 </a>
             </div>
@@ -825,7 +819,7 @@
     </footer>
 
     <script>
-        const images = ['stand-1.jpeg', 'stand-2.jpeg', 'stand-3.jpeg', 'stand-4.jpeg'];
+        const images = ['polka-1.jpeg', 'polka-2.jpeg', 'polka-3.jpeg', 'polka-4.jpeg'];
         let currentIdx = 0;
 
         function switchImage(idx, el) {
