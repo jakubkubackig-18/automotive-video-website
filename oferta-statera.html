@@ -497,6 +497,67 @@
             color: #555;
         }
 
+        /* ── RELATED PRODUCTS ── */
+        .related-section {
+            background: #111;
+            padding: 50px 40px;
+            margin-top: 60px;
+        }
+
+        .related-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .related-section h3 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 28px;
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .related-card {
+            background: #1a1a1c;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform .2s;
+            cursor: pointer;
+        }
+
+        .related-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .related-card img {
+            width: 100%;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+            display: block;
+        }
+
+        .related-card .card-body {
+            padding: 16px 18px;
+        }
+
+        .related-card .card-name {
+            font-size: 14px;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 6px;
+        }
+
+        .related-card .card-price {
+            font-size: 15px;
+            font-weight: 700;
+            color: #e51d20;
+        }
+
         /* ── RESPONSIVE ── */
         @media (max-width: 900px) {
             .product-section {
@@ -518,6 +579,10 @@
 
             .product-section {
                 padding: 10px 20px 40px;
+            }
+
+            .related-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -684,6 +749,36 @@
                 </div>
             </div>
 
+        </div>
+    </div>
+
+    <!-- RELATED PRODUCTS -->
+    <div class="related-section">
+        <div class="related-inner">
+            <h3>You may also like</h3>
+            <div class="related-grid">
+                <div class="related-card">
+                    <img src="kask-pokla-2.jpeg" alt="Motorcycle Helmet Shelf">
+                    <div class="card-body">
+                        <div class="card-name">ELIPSA Helmet Shelf</div>
+                        <div class="card-price">490,00 €</div>
+                    </div>
+                </div>
+                <div class="related-card">
+                    <img src="stand-drugi-1.jpeg" alt="Motorcycle Stand">
+                    <div class="card-body">
+                        <div class="card-name">AURORA Trolley – Pro Edition</div>
+                        <div class="card-price">1 490,00 €</div>
+                    </div>
+                </div>
+                <div class="related-card">
+                    <img src="polka-4.jpeg" alt="Shelf">
+                    <div class="card-body">
+                        <div class="card-name">ELIPSA Wall Shelf</div>
+                        <div class="card-price">390,00 €</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
