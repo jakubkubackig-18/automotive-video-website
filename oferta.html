@@ -17,35 +17,54 @@
         }
 
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 40px auto;
-            background: #18191c;
-            border-radius: 12px;
+            background: #151618;
+            border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
             border: 1px solid #2a2b2f;
         }
 
         .header {
-            background: linear-gradient(135deg, #1f2024, #0a0a0b);
-            padding: 60px 40px;
+            position: relative;
+            background: url('bmw_front.png') center/cover no-repeat;
+            padding: 100px 40px;
             text-align: center;
-            border-bottom: 2px solid #e51d20;
+            border-bottom: 3px solid #e51d20;
             /* Akcent czerwieni z Elipsa.pro */
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(24, 25, 28, 0.92), rgba(10, 10, 11, 0.98));
+            z-index: 1;
+        }
+
+        .header h1,
+        .header p {
+            position: relative;
+            z-index: 2;
         }
 
         .header h1 {
             margin: 0;
-            font-size: 32px;
+            font-size: 46px;
             font-weight: 800;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
             text-transform: uppercase;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
         }
 
         .header p {
-            margin: 10px 0 0;
-            font-size: 16px;
-            color: #888;
+            margin: 15px 0 0;
+            font-size: 18px;
+            color: #bbb;
         }
 
         .content {
@@ -196,22 +215,38 @@
             border: 0;
         }
 
+        .vertical-video-container {
+            width: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+            background: #000;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            margin-top: 25px;
+        }
+
+        .vertical-video-container video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
         .portfolio-feature {
             display: flex;
-            align-items: flex-start;
-            gap: 25px;
-            margin-top: 25px;
+            align-items: center;
+            gap: 40px;
+            margin-top: 40px;
             text-align: left;
         }
 
         .portfolio-feature .video-wrapper {
-            flex: 0 0 55%;
+            flex: 0 0 35%;
         }
 
         .portfolio-feature .text-wrapper {
             flex: 1;
-            font-size: 14px;
+            font-size: 16px;
             color: #ddd;
+            line-height: 1.8;
         }
 
         @media (max-width: 768px) {
@@ -221,6 +256,8 @@
 
             .portfolio-feature .video-wrapper {
                 width: 100%;
+                max-width: 350px;
+                margin: 0 auto;
             }
         }
     </style>
@@ -294,8 +331,8 @@
                 <h3>Moje Portfolio – Nagrania Motoryzacyjne</h3>
                 <div class="portfolio-feature">
                     <div class="video-wrapper">
-                        <div class="iframe-container" style="margin-top:0;">
-                            <!-- Uzupełnij src w poniższym iframe właściwym wideo M3 F80 -->
+                        <div class="vertical-video-container" style="margin-top:0;">
+                            <!-- Vertical video src: M3 F80 -->
                             <video controls autoplay loop muted playsinline src="m3-f80 copy.mov"></video>
                         </div>
                     </div>
@@ -310,6 +347,12 @@
                 </div>
             </div>
 
+        </div>
+
+        <div style="text-align: center; margin: 60px 0 30px;">
+            <a href="mailto:kontakt@filmujauto.pl"
+                style="display: inline-block; padding: 18px 40px; background: #e51d20; color: #fff; font-size: 18px; font-weight: 700; text-decoration: none; border-radius: 8px; text-transform: uppercase; letter-spacing: 1px; transition: background 0.3s; box-shadow: 0 4px 15px rgba(229, 29, 32, 0.4);">Skontaktuj
+                się z nami</a>
         </div>
 
         <div class="footer">
