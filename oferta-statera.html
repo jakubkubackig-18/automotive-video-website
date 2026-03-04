@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Oferta Produkcji Wideo - Elipsa.pro</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f1011;
+            color: #eaeaea;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            background: #151618;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+            border: 1px solid #2a2b2f;
+        }
+
+        .header {
+            position: relative;
+            background: url('https://elipsa.pro/wp-content/uploads/2026/01/BWRO3046-1024x1024.jpg') center/cover no-repeat;
+            padding: 100px 40px;
+            text-align: center;
+            border-bottom: 3px solid #e51d20;
+            /* Akcent czerwieni z Elipsa.pro */
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(24, 25, 28, 0.92), rgba(10, 10, 11, 0.98));
+            z-index: 1;
+        }
+
+        .header h1,
+        .header p {
+            position: relative;
+            z-index: 2;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 46px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+        }
+
+        .header p {
+            margin: 15px 0 0;
+            font-size: 18px;
+            color: #bbb;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        h2 {
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+            margin-top: 40px;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .item {
+            background: #1d1e22;
+            padding: 24px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 4px solid #333;
+            transition: border-left-color 0.3s;
+        }
+
+        .item:hover {
+            border-left-color: #e51d20;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .item h3 {
+            margin: 0;
+            font-size: 20px;
+            color: #fff;
+        }
+
+        .price {
+            font-size: 18px;
+            font-weight: 600;
+            color: #e51d20;
+        }
+
+        .description {
+            font-size: 14px;
+            color: #aaa;
+        }
+
+        .options-box {
+            background: #111;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 15px;
+            border: 1px dashed #444;
+        }
+
+        .options-box h4 {
+            margin-top: 0;
+            margin-bottom: 8px;
+            color: #ccc;
+        }
+
+        .portfolio {
+            text-align: center;
+            margin-top: 50px;
+            padding: 30px;
+            background: rgba(229, 29, 32, 0.05);
+            /* Lekko czerwony bg */
+            border-radius: 8px;
+        }
+
+        .portfolio h3 {
+            margin-top: 0;
+            color: #fff;
+        }
+
+        .portfolio-links a {
+            color: #e51d20;
+            text-decoration: none;
+            display: inline-block;
+            margin: 5px 15px;
+            font-weight: 600;
+        }
+
+        .portfolio-links a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 12px;
+            color: #555;
+            background: #111;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        .note {
+            font-size: 12px;
+            color: #777;
+            font-style: italic;
+        }
+
+        .video-placeholder {
+            background: #111;
+            border: 1px dashed #444;
+            border-radius: 6px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 25px;
+            color: #666;
+            font-size: 13px;
+            gap: 12px;
+        }
+
+        .video-placeholder svg {
+            width: 20px;
+            height: 20px;
+            stroke: #666;
+        }
+
+        .iframe-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            /* 16:9 proportion */
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            margin-top: 25px;
+            background: #000;
+        }
+
+        .iframe-container iframe,
+        .iframe-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .vertical-video-container {
+            width: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+            background: #000;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            margin-top: 25px;
+        }
+
+        .vertical-video-container video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .mockup-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .mockup-grid img {
+            width: 100%;
+            height: 200px;
+            /* Fixed height for consistent grid */
+            border-radius: 8px;
+            object-fit: cover;
+            border: 1px solid #333;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .portfolio-feature {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-top: 40px;
+            text-align: left;
+        }
+
+        .portfolio-feature .video-wrapper {
+            flex: 0 0 35%;
+        }
+
+        .portfolio-feature .text-wrapper {
+            flex: 1;
+            font-size: 16px;
+            color: #ddd;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 768px) {
+            .portfolio-feature {
+                flex-direction: column;
+            }
+
+            .portfolio-feature .video-wrapper {
+                width: 100%;
+                max-width: 350px;
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>Oferta Produkcji Wideo</h1>
+            <p>Projekt: Elipsa.pro – Akcesoria Motocyklowe</p>
+        </div>
+
+        <div class="content">
+            <p>Propozycja realizacji nagrań premium, utrzymanych w kinowym, mrocznym klimacie, podkreślającym charakter
+                marki Elipsa i stojaka Statera.</p>
+
+            <h2>Formaty realizacji wideo (Header i Filmy Produktowe)</h2>
+            <div class="item">
+                <div class="item-header">
+                    <h3>Opcja 1: Pojedyncze ujęcia produktów i headera</h3>
+                    <span class="price">[Cena PLN netto]</span>
+                </div>
+                <div class="description">
+                    Płynne, nieprzerwane pojedyncze formy ujęć zastępujące zdjęcia dla stojaka Statera (i innych
+                    produktów) oraz pojedyncze,
+                    klimatyczne ujęcie do headera strony.
+                    <ul>
+                        <li>1 dzień zdjęciowy (krótszy format)</li>
+                        <li>Wydanie materiałów bez skomplikowanego, zaawansowanego montażu</li>
+                        <li>Sound Design + muzyka stockowa oraz Color Grading w mrocznym klimacie</li>
+                    </ul>
+                    <div class="mockup-grid">
+                        <img src="https://elipsa.pro/wp-content/uploads/2026/01/BWRO3144-1x1-1-1024x1024.jpg"
+                            alt="Statera Stand">
+                        <img src="https://elipsa.pro/wp-content/uploads/2026/01/BWRO3112-1024x1024.jpg"
+                            alt="Statera Stand Details">
+                        <img src="https://elipsa.pro/wp-content/uploads/2026/01/BWRO3077-1024x1024.jpg"
+                            alt="Statera Stand usage">
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <h3>Opcja 2: Spoty, zmontowane z kilku ujęć</h3>
+                    <span class="price">[Cena PLN netto]</span>
+                </div>
+                <div class="description">
+                    Kompleksowa, zaawansowana realizacja. Dla stojaka Statera oraz głównego Headera tworzymy
+                    dynamiczne, krótkie spoty zmontowane z wielu perspektyw (szerokie kadry, detale, zróżnicowany ruch).
+                    <ul>
+                        <li>Większa liczba ujęć i bardziej skomplikowany plan zdjęciowy, montaż i nadanie wysokiej
+                            dynamiki dla każdego filmu z osobna.</li>
+                        <li>Rozbudowany Sound Design potęgujący immersję</li>
+                    </ul>
+
+                    <p style="margin-top:20px; font-weight: 600; color: #fff;">Przykładowa realizacja (wzór
+                        Dynamoto.eu):</p>
+                    <div class="iframe-container">
+                        <!-- Miejsce na wideo z dynamoto lub placeholderowy film do podmienienia -->
+                        <video autoplay loop muted playsinline
+                            src="https://dynamoto.eu/cdn/shop/files/DYNAMOTO_41c09ebc-7ee4-469b-980b-4b20a7fcc377.mp4?v=1716353987"></video>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sekcja z oddzielnymi produktami zostala zintegrowana w pakietach A/B -->
+
+            <div class="portfolio">
+                <h3>Moje Portfolio – Nagrania Motoryzacyjne</h3>
+                <div class="portfolio-feature">
+                    <div class="video-wrapper">
+                        <div class="vertical-video-container" style="margin-top:0;">
+                            <!-- Vertical video src: M3 F80 -->
+                            <video controls autoplay loop muted playsinline src="m3-f80 copy.mov"></video>
+                        </div>
+                    </div>
+                    <div class="text-wrapper">
+                        <p style="margin-top:0;"><b>Przykład M3 F80</b></p>
+                        <p>Realizacja w mrocznym, kinowym klimacie motoryzacyjnym. Mocne zabawy światłem, wydobycie
+                            krawędzi oraz zastosowanie dynamicznego ruchu kamery oddającego surowy charakter całości.
+                            Estetyka ujęcia i montaż mocno celująca w profil marki Elipsa.</p>
+                        <p class="note">Podmień w kodzie adres SRC iframa powyżej na autentyczny link do Twojego wideo w
+                            YouTube / Vimeo.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div style="text-align: center; margin: 60px 0 30px;">
+            <a href="mailto:kontakt@filmujauto.pl"
+                style="display: inline-block; padding: 18px 40px; background: #e51d20; color: #fff; font-size: 18px; font-weight: 700; text-decoration: none; border-radius: 8px; text-transform: uppercase; letter-spacing: 1px; transition: background 0.3s; box-shadow: 0 4px 15px rgba(229, 29, 32, 0.4);">Skontaktuj
+                się z nami</a>
+        </div>
+
+        <div class="footer">
+            Ważność oferty: 30 dni. Kwoty netto. <br>
+            W razie pytań zapraszam do kontaktu.
+        </div>
+    </div>
+
+</body>
+
+</html>
