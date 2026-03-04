@@ -600,9 +600,9 @@
 
     <!-- HEADER -->
     <header class="site-header">
-        <a href="https://elipsa.pro" class="site-logo">elipsa<span class="dot">.</span>pro</a>
+        <a href="elipsa-demo.html" class="site-logo">elipsa<span class="dot">.</span>pro</a>
         <div class="main-nav">
-            <a href="#">Home</a>
+            <a href="elipsa-demo.html">Home</a>
             <a href="#" class="active">Shop</a>
             <a href="#">Info</a>
             <a href="#">FAQ</a>
@@ -636,7 +636,7 @@
 
     <!-- BREADCRUMB -->
     <div class="breadcrumb">
-        <a href="#">Home</a> / <a href="#">Products</a> / <span class="current">AURORA Motorcycle Stand</span>
+        <a href="elipsa-demo.html">Home</a> / <a href="#">Products</a> / <span class="current">AURORA Motorcycle Stand</span>
     </div>
 
     <!-- SOCIAL SIDEBAR -->
@@ -664,14 +664,22 @@
             <div class="gallery-main">
                 <button class="gallery-arrow prev" onclick="navGallery(-1)">‹</button>
                 <img id="main-img" src="stand-1.jpeg" alt="AURORA Motorcycle Stand">
+                <video id="main-video" autoplay loop muted playsinline src="header-stand-vid-1.mp4"
+                    style="display:none; width: 100%; height: 100%; object-fit: contain; background: #000;"></video>
                 <button class="gallery-arrow next" onclick="navGallery(1)">›</button>
             </div>
             <div class="gallery-thumbs">
                 <div class="thumb active" onclick="switchImage(0, this)">
                     <img src="stand-1.jpeg" alt="">
                 </div>
-                <div class="thumb" onclick="switchImage(1, this)">
+                <div class="thumb" onclick="switchImage(1, this)" style="position:relative;">
                     <img src="stand-2.jpeg" alt="">
+                    <div
+                        style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:rgba(229,29,32,0.9);border-radius:50%;width:32px;height:32px;display:flex;align-items:center;justify-content:center;pointer-events:none;box-shadow:0 2px 6px rgba(0,0,0,0.3);">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#fff">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                    </div>
                 </div>
                 <div class="thumb" onclick="switchImage(2, this)">
                     <img src="stand-3.jpeg" alt="">
@@ -827,19 +835,39 @@
     </footer>
 
     <script>
-        const images = ['stand-1.jpeg', 'stand-2.jpeg', 'stand-3.jpeg', 'stand-4.jpeg'];
+        const media = [
+            { type: 'image', src: 'stand-1.jpeg' },
+            { type: 'video', src: 'header-stand-vid-1.mp4' },
+            { type: 'image', src: 'stand-3.jpeg' },
+            { type: 'image', src: 'stand-4.jpeg' }
+        ];
         let currentIdx = 0;
 
         function switchImage(idx, el) {
             currentIdx = idx;
-            document.getElementById('main-img').src = images[idx];
+            const imgEl = document.getElementById('main-img');
+            const vidEl = document.getElementById('main-video');
+            const item = media[idx];
+
+            if (item.type === 'video') {
+                imgEl.style.display = 'none';
+                vidEl.style.display = 'block';
+                vidEl.src = item.src;
+                vidEl.play();
+            } else {
+                vidEl.style.display = 'none';
+                vidEl.pause();
+                imgEl.style.display = 'block';
+                imgEl.src = item.src;
+            }
+
             document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
             if (el) el.classList.add('active');
             else document.querySelectorAll('.thumb')[idx].classList.add('active');
         }
 
         function navGallery(dir) {
-            currentIdx = (currentIdx + dir + images.length) % images.length;
+            currentIdx = (currentIdx + dir + media.length) % media.length;
             switchImage(currentIdx);
         }
 
