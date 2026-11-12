@@ -378,6 +378,16 @@ h1 span {
     filter: brightness(0.9);
 }
 
+.screen-img::-webkit-media-controls,
+.screen-img::-webkit-media-controls-panel,
+.screen-img::-webkit-media-controls-play-button,
+.screen-img::-webkit-media-controls-start-playback-button {
+    display: none !important;
+    -webkit-appearance: none !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
 /* TikTok Overlay UI */
 .tiktok-overlay {
     position: absolute;

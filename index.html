@@ -486,8 +486,11 @@
             };
 
             tryPlayHero();
-            document.addEventListener('touchstart', tryPlayHero, { once: true, passive: true });
-            document.addEventListener('click', tryPlayHero, { once: true });
+            heroVideo.addEventListener('loadedmetadata', tryPlayHero);
+            heroVideo.addEventListener('canplay', tryPlayHero);
+            ['touchstart', 'touchmove', 'touchend', 'scroll', 'click'].forEach(evt => {
+                window.addEventListener(evt, tryPlayHero, { once: true, passive: true });
+            });
             heroVideo.parentElement.addEventListener('click', () => {
                 if (heroVideo.paused) {
                     heroVideo.play().catch(() => {});
