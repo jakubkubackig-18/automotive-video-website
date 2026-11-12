@@ -26,7 +26,7 @@
     <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/style.css?v=5">
+    <link rel="stylesheet" href="css/style.css?v=6">
 </head>
 
 <body>
@@ -97,16 +97,14 @@
                 </div>
 
                 <div class="phone-frame tiktok-mockup">
-                    <video class="screen-img" autoplay loop muted playsinline poster="bmw_detail.png"
+                    <video id="hero-video" class="screen-img" src="bmw_m4_cs.mp4" autoplay loop muted playsinline webkit-playsinline preload="auto" poster="bmw_detail.png"
                         style="object-fit: cover; width: 100%; height: 100%;">
-                        <source src="bmw_m4_cs.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
                     </video>
 
                     <div class="tiktok-overlay">
                         <div class="tiktok-stat">
                             1.3M
-                            <span>Wyświetleń · BMW M4 CS</span>
+                            <span>Wyświetleń</span>
                         </div>
 
                         <div class="tiktok-icons">
@@ -473,6 +471,31 @@
                 */
             });
         });
+
+        // Ensure hero video plays on mobile (iOS Low Power Mode / touch fallback)
+        const heroVideo = document.getElementById('hero-video');
+        if (heroVideo) {
+            heroVideo.muted = true;
+            heroVideo.defaultMuted = true;
+            heroVideo.playsInline = true;
+
+            const tryPlayHero = () => {
+                if (heroVideo.paused) {
+                    heroVideo.play().catch(() => {});
+                }
+            };
+
+            tryPlayHero();
+            document.addEventListener('touchstart', tryPlayHero, { once: true, passive: true });
+            document.addEventListener('click', tryPlayHero, { once: true });
+            heroVideo.parentElement.addEventListener('click', () => {
+                if (heroVideo.paused) {
+                    heroVideo.play().catch(() => {});
+                } else {
+                    heroVideo.pause();
+                }
+            });
+        }
 
         // Form submission (Basic alert for now)
         const contactForm = document.querySelector('form');

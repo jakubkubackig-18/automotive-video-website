@@ -391,6 +391,7 @@ h1 span {
     align-items: flex-end;
     padding: 28px 20px 32px;
     color: white;
+    pointer-events: none;
 }
 
 .tiktok-stat {
@@ -1610,13 +1611,13 @@ footer {
     }
 
     .badge-top {
-        left: 0;
-        top: 16px;
+        left: -10px;
+        top: -14px;
     }
 
     .badge-bottom {
-        right: 0;
-        bottom: 24px;
+        right: -10px;
+        bottom: -16px;
     }
 
     .badge-icon {
