@@ -325,71 +325,57 @@ h1 span {
 /* HERO VISUAL MOCKUP */
 .hero-visual {
     position: relative;
-    /* Ensure z-index is handled */
     z-index: 5;
-    /* Perspective for 3D */
-    perspective: 1000px;
+    perspective: 1100px;
+}
+
+.hero-visual-glow {
+    position: absolute;
+    inset: -24px;
+    background: radial-gradient(circle, rgba(197, 157, 95, 0.22) 0%, rgba(18, 32, 56, 0) 70%);
+    filter: blur(24px);
+    z-index: 1;
+    animation: pulseGlow 5s ease-in-out infinite alternate;
+    pointer-events: none;
+}
+
+@keyframes pulseGlow {
+    0% {
+        opacity: 0.65;
+        transform: scale(0.96);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1.06);
+    }
 }
 
 .phone-frame.tiktok-mockup {
     width: 310px;
     height: 550px;
     background: #091224;
-    border: 1px solid rgba(197, 157, 95, 0.35);
-    border-radius: 10px;
+    border: 2px solid rgba(197, 157, 95, 0.45);
+    border-radius: 18px;
     position: relative;
+    z-index: 5;
     box-shadow:
-        0 30px 70px rgba(5, 10, 20, 0.65);
+        0 35px 80px rgba(5, 10, 20, 0.75),
+        0 0 40px rgba(197, 157, 95, 0.14);
     overflow: hidden;
-    transform: none;
-    transition: transform 0.4s ease, border-color 0.4s;
+    transform: rotateY(-8deg) rotateX(3deg);
+    transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.4s;
 }
 
 .tiktok-mockup:hover {
-    transform: translateY(-4px);
-    border-color: rgba(197, 164, 126, 0.45);
-}
-
-.cinema-frame-caption {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 36px 20px 18px;
-    background: linear-gradient(to top, rgba(6, 6, 7, 0.92), transparent);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 0.72rem;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--gray-light);
-    border-top: 1px solid rgba(255, 255, 255, 0.04);
-}
-
-.cinema-frame-caption span:last-child {
-    color: var(--orange);
-    font-weight: 600;
-}
-
-.notch {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 140px;
-    height: 30px;
-    background: #222;
-    border-radius: 0 0 18px 18px;
-    z-index: 10;
+    transform: rotateY(-3deg) rotateX(1deg) scale(1.02);
+    border-color: var(--orange);
 }
 
 .screen-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* Darken image slightly */
-    filter: brightness(0.85);
+    filter: brightness(0.9);
 }
 
 /* TikTok Overlay UI */
@@ -398,37 +384,39 @@ h1 span {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 50%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+    height: 48%;
+    background: linear-gradient(to top, rgba(9, 18, 36, 0.94) 0%, rgba(9, 18, 36, 0.45) 55%, transparent 100%);
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    padding: 30px 20px 60px;
+    padding: 28px 20px 32px;
     color: white;
 }
 
 .tiktok-stat {
-    font-size: 3rem;
-    font-weight: 800;
+    font-size: 2.5rem;
+    font-weight: 700;
     line-height: 1;
-    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    color: var(--orange);
+    text-shadow: 0 4px 12px rgba(5, 10, 20, 0.6);
     display: flex;
     flex-direction: column;
 }
 
 .tiktok-stat span {
-    font-size: 1rem;
-    font-weight: 500;
-    opacity: 0.9;
-    margin-top: 5px;
+    font-size: 0.76rem;
+    font-weight: 600;
+    color: var(--white);
+    opacity: 0.92;
+    margin-top: 8px;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.12em;
 }
 
 .tiktok-icons {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 18px;
     align-items: center;
 }
 
@@ -437,34 +425,35 @@ h1 span {
     flex-direction: column;
     align-items: center;
     gap: 4px;
+    color: var(--white);
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .icon-group svg {
-    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
-    transition: transform 0.2s;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.35));
+    transition: transform 0.2s, color 0.2s;
 }
 
 .icon-group:hover svg {
     transform: scale(1.15);
+    color: var(--orange);
 }
 
 .icon-group span {
-    font-size: 0.8rem;
+    font-size: 0.74rem;
     font-weight: 600;
 }
 
-
-/* Floating Badges */
+/* Floating Badges (PDF Midnight Navy & Gold Style) */
 .floating-badge {
     position: absolute;
-    background: rgba(18, 19, 24, 0.85);
+    background: rgba(18, 32, 56, 0.92);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     padding: 12px 18px;
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 18px 36px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    border: 1px solid rgba(197, 157, 95, 0.45);
+    box-shadow: 0 18px 40px rgba(5, 10, 20, 0.6);
     display: flex;
     align-items: center;
     gap: 12px;
@@ -474,28 +463,27 @@ h1 span {
 }
 
 .badge-top {
-    top: 60px;
-    left: -60px;
+    top: 50px;
+    left: -55px;
     animation-delay: 0s;
 }
 
 .badge-bottom {
-    bottom: 80px;
-    right: -40px;
-    animation-delay: 2s;
+    bottom: 75px;
+    right: -45px;
+    animation-delay: 2.2s;
 }
 
 .badge-icon {
-    width: 38px;
-    height: 38px;
-    background: rgba(224, 104, 36, 0.14);
-    border: 1px solid rgba(224, 104, 36, 0.28);
+    width: 40px;
+    height: 40px;
+    background: rgba(197, 157, 95, 0.16);
+    border: 1px solid rgba(197, 157, 95, 0.35);
     color: var(--orange);
-    border-radius: 10px;
+    border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.1rem;
     flex-shrink: 0;
 }
 
@@ -505,17 +493,18 @@ h1 span {
 }
 
 .badge-title {
-    font-weight: 800;
-    font-size: 1.1rem;
-    color: var(--white);
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: var(--orange);
     line-height: 1.1;
 }
 
 .badge-sub {
-    font-size: 0.75rem;
-    color: var(--gray);
+    font-size: 0.72rem;
+    color: var(--gray-light);
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.08em;
+    margin-top: 2px;
 }
 
 @keyframes floatBadge {
@@ -1471,10 +1460,10 @@ footer {
     /* PHONE ANIMATION FIX */
     .phone-frame.tiktok-mockup {
         width: 240px;
-        height: 426px;
-        border-width: 1px;
-        border-radius: 2px;
-        transform: none;
+        height: 440px;
+        border-width: 2px;
+        border-radius: 16px;
+        transform: rotateY(-5deg) rotateX(2deg);
         margin: 0 auto;
     }
 
