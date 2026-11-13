@@ -369,29 +369,32 @@
                         </a>
                     </div>
                 </div>
-                <form>
+                <form action="https://formsubmit.co/jakubkubacki.g@gmail.com" method="POST">
+                    <input type="hidden" name="_subject" value="Nowe zapytanie ze strony FilmujAuto.pl">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_captcha" value="false">
                     <div class="form-group">
                         <label for="name">Imię</label>
-                        <input type="text" id="name" class="form-control" placeholder="Wpisz swoje imię">
+                        <input type="text" id="name" name="Imię" class="form-control" placeholder="Wpisz swoje imię" required>
                     </div>
                     <div class="form-group">
-                        <label>Email</label>
-                        <input type="email" class="form-control" placeholder="twoj@email.com">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="Email" class="form-control" placeholder="twoj@email.com" required>
                     </div>
                     <div class="form-group">
-                        <label>Temat</label>
-                        <select class="form-control">
-                            <option>Chcę film sprzedażowy</option>
-                            <option>Potrzebuję rolek na social media</option>
-                            <option>Inna współpraca</option>
+                        <label for="topic">Temat</label>
+                        <select id="topic" name="Temat" class="form-control">
+                            <option value="Chcę film sprzedażowy">Chcę film sprzedażowy</option>
+                            <option value="Potrzebuję rolek na social media">Potrzebuję rolek na social media</option>
+                            <option value="Inna współpraca">Inna współpraca</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label>Wiadomość</label>
-                        <textarea class="form-control" placeholder="Opisz krótko o jakie auto/usługę chodzi"></textarea>
+                        <label for="message">Wiadomość</label>
+                        <textarea id="message" name="Wiadomość" class="form-control" placeholder="Opisz krótko o jakie auto/usługę chodzi" required></textarea>
                     </div>
                     <div class="checkbox-group">
-                        <input type="checkbox" id="privacy">
+                        <input type="checkbox" id="privacy" name="Zgoda RODO" value="Tak" required>
                         <label for="privacy">Zgadzam się na przetwarzanie moich danych osobowych w celu
                             kontaktu.</label>
                     </div>
@@ -482,15 +485,6 @@
                 } else {
                     heroVideo.pause();
                 }
-            });
-        }
-
-        // Form submission (Basic alert for now)
-        const contactForm = document.querySelector('form');
-        if (contactForm) {
-            contactForm.addEventListener('submit', (e) => {
-                e.preventDefault();
-                alert('Dziękuję za wiadomość! To jest wersja demonstracyjna strony.');
             });
         }
     </script>
