@@ -485,34 +485,6 @@
             });
         }
 
-        // Ensure hero video plays on mobile (iOS Low Power Mode / touch fallback)
-        const heroVideo = document.getElementById('hero-video');
-        if (heroVideo) {
-            heroVideo.muted = true;
-            heroVideo.defaultMuted = true;
-            heroVideo.playsInline = true;
-
-            const tryPlayHero = () => {
-                if (heroVideo.paused) {
-                    heroVideo.play().catch(() => {});
-                }
-            };
-
-            tryPlayHero();
-            heroVideo.addEventListener('loadedmetadata', tryPlayHero);
-            heroVideo.addEventListener('canplay', tryPlayHero);
-            ['touchstart', 'touchmove', 'touchend', 'scroll', 'click'].forEach(evt => {
-                window.addEventListener(evt, tryPlayHero, { once: true, passive: true });
-            });
-            heroVideo.parentElement.addEventListener('click', () => {
-                if (heroVideo.paused) {
-                    heroVideo.play().catch(() => {});
-                } else {
-                    heroVideo.pause();
-                }
-            });
-        }
-
         // Form submission (Basic alert for now)
         const contactForm = document.querySelector('form');
         if (contactForm) {
