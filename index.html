@@ -146,7 +146,7 @@
             <div class="section-header section-header-left" data-aos="fade-up">
                 <span class="section-tag">Współpraca · Jak pracujemy</span>
                 <h2 class="process-title">Pokazujemy pracę, precyzję i efekt</h2>
-                <p>Wy dajecie wiedzę, samochody i warsztat, a scenariusze, nagranie i montaż biorę na siebie, żeby nie zabierać Wam czasu. Z jednego dnia zdjęciowego tworzymy materiał, który pracuje na Instagramie, TikToku, Facebooku i YouTube.</p>
+                <p>Wy dajecie wiedzę, samochody i warsztat, a scenariusze, nagranie i montaż biorę na siebie, żeby nie zabierać Wam czasu. Z jednego dnia zdjęciowego tworzymy materiał, który pracuje na Instagramie, TikToku, Facebooku i YouTube i zdobywa uwagę Waszych klientów.</p>
             </div>
 
             <div class="cards-grid">
@@ -263,21 +263,6 @@
                 </div>
             </div>
 
-            <!-- Client Results Strip from PDF Page 8 -->
-            <div class="client-summary-grid" data-aos="fade-up">
-                <div class="client-summary-item">
-                    <h4>Stradale Classics</h4>
-                    <p>534 tys. wyświetleń · 2 filmy YouTube · montaż</p>
-                </div>
-                <div class="client-summary-item">
-                    <h4>RAM Factory</h4>
-                    <p>235 tys. wyświetleń · 3 filmy YouTube · montaż</p>
-                </div>
-                <div class="client-summary-item">
-                    <h4>Sure Classics</h4>
-                    <p>7,5 mln wyświetleń rolek · 2 filmy YouTube · nagranie i montaż</p>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -471,6 +456,34 @@
                 */
             });
         });
+
+        // Ensure hero video plays on mobile (iOS Low Power Mode / touch fallback)
+        const heroVideo = document.getElementById('hero-video');
+        if (heroVideo) {
+            heroVideo.muted = true;
+            heroVideo.defaultMuted = true;
+            heroVideo.playsInline = true;
+
+            const tryPlayHero = () => {
+                if (heroVideo.paused) {
+                    heroVideo.play().catch(() => {});
+                }
+            };
+
+            tryPlayHero();
+            heroVideo.addEventListener('loadedmetadata', tryPlayHero);
+            heroVideo.addEventListener('canplay', tryPlayHero);
+            ['touchstart', 'touchmove', 'touchend', 'scroll', 'click'].forEach(evt => {
+                window.addEventListener(evt, tryPlayHero, { once: true, passive: true });
+            });
+            heroVideo.parentElement.addEventListener('click', () => {
+                if (heroVideo.paused) {
+                    heroVideo.play().catch(() => {});
+                } else {
+                    heroVideo.pause();
+                }
+            });
+        }
 
         // Ensure hero video plays on mobile (iOS Low Power Mode / touch fallback)
         const heroVideo = document.getElementById('hero-video');
